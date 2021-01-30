@@ -2,6 +2,8 @@ import Layout from "@components/Layout";
 import PostList from "@components/PostList";
 import matter from "gray-matter";
 
+import "tailwindcss/tailwind.css";
+
 const Index = ({ posts, title, description }) => {
   return (
     <Layout pageTitle={title}>
