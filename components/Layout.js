@@ -13,10 +13,10 @@ export const Layout = ({ children, pageTitle, ...props }) => {
         <Header />
         <div>{children}</div>
       </section>
-      <footer className="flex flex-row gap-2 h-10 bg-secondary text-frontPrimary p-2 text-sm align-text-bottom font-mono">
+      <footer className="flex flex-row gap-2 h-10 bg-secondary text-frontPrimary p-2 text-sm align-text-bottom font-sans justify-center">
         Built with <IconReact size={22} /> | <IconNextJS size={22} /> |
         <IconTailwindCss size={22} />
-        and <IconLove size={22} /> by poladuco
+        and <IconLove size={22} /> by <span className='font-mono'>poladuco</span>
       </footer>
     </div>
   );
