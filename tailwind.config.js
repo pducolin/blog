@@ -5,10 +5,13 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      primary: "#fac9b8",
-      secondary: "#bebbbb",
+      primary: "#fcd5ce",
+      secondary: "#d8e2dc",
       frontPrimary: colors.black,
       frontSecondary: "#444054",
+      backgroundPrimary: colors.white,
+      backgroundSecondary: "#f8edeb",
+      red: colors.red,
     },
     extend: {},
   },
