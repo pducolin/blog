@@ -4,7 +4,7 @@ import { IconLove, IconNextJS, IconReact, IconTailwindCss } from "./Icons";
 
 export const Layout = ({ children, pageTitle, ...props }) => {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen w-full md:w-2/3 xl:1/2 m-auto">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{pageTitle}</title>
