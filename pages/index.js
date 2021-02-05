@@ -1,5 +1,5 @@
-import Layout from "@components/Layout";
-import PostList from "@components/PostList";
+import { Layout } from "@components/Layout";
+import { PostList } from "@components/PostList";
 import matter from "gray-matter";
 
 import "tailwindcss/tailwind.css";
@@ -7,8 +7,8 @@ import "tailwindcss/tailwind.css";
 const Index = ({ posts, title, description }) => {
   return (
     <Layout pageTitle={title}>
-      <h1 className="title">Welcome to my blog!</h1>
-      <p className="description">{description}</p>
+      <h1 className="text-xl mt-2 font-mono text-center">Welcome to my blog</h1>
+      <p className="font-mono text-center">{description}</p>
       <main>
         <PostList posts={posts} />
       </main>

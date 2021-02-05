@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function PostList({ posts }) {
+export const PostList = ({ posts }) => {
   if (posts === "undefined") return null;
 
   return (
@@ -20,4 +20,4 @@ export default function PostList({ posts }) {
       </ul>
     </div>
   );
-}
+};
