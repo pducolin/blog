@@ -1,8 +1,9 @@
-import Link from "next/link";
-import matter from "gray-matter";
-import ReactMarkdown from "react-markdown";
+import "tailwindcss/tailwind.css";
 
 import { Layout } from "@components/Layout";
+import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import matter from "gray-matter";
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <></>;
