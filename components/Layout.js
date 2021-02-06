@@ -24,9 +24,14 @@ export const Layout = ({ children, pageTitle, ...props }) => {
             <div>{children}</div>
           </section>
           <footer className="flex flex-row justify-center flex-grow-0 h-10 gap-2 p-2 font-sans text-sm align-text-bottom bg-secondary text-frontPrimary">
-            Built with <IconReact size={22} /> | <IconNextJS size={22} /> |
+            Built with <IconReact size={22} />
+            {" | "}
+            <IconNextJS size={22} />
+            {" | "}
             <IconTailwindCss size={22} />
-            and <IconLove size={22} /> by{" "}
+            {" and "}
+            <IconLove size={22} />
+            {" by "}
             <span className="font-mono">poladuco</span>
           </footer>
         </div>
