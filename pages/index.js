@@ -7,8 +7,12 @@ import "tailwindcss/tailwind.css";
 const Index = ({ posts, title, description }) => {
   return (
     <Layout pageTitle={title}>
-      <h1 className="text-xl mt-2 font-mono text-center">Welcome to my blog</h1>
-      <p className="font-mono text-center">{description}</p>
+      <h1 className="my-4 font-mono text-4xl font-medium text-center">
+        Welcome to my blog
+      </h1>
+      <h2 className="font-mono italic text-center text-md text-frontSecondary">
+        {description}
+      </h2>
       <main>
         <PostList posts={posts} />
       </main>

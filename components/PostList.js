@@ -1,21 +1,15 @@
-import Link from "next/link";
+import { PostCard } from "@components/PostCard";
 
 export const PostList = ({ posts }) => {
   if (posts === "undefined") return null;
 
   return (
-    <div>
+    <div className="w-full h-full">
       {!posts && <div>No posts!</div>}
-      <ul>
+      <ul className="flex flex-row flex-wrap w-full">
         {posts &&
           posts.map((post) => {
-            return (
-              <li key={post.slug}>
-                <Link href={{ pathname: `/post/${post.slug}` }}>
-                  <a>{post.frontmatter.title}</a>
-                </Link>
-              </li>
-            );
+            return <PostCard {...post} />;
           })}
       </ul>
     </div>

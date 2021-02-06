@@ -1,39 +1,47 @@
 import Link from "next/link";
-import { IconTwitter, IconGithub } from "./Icons";
+import { IconTwitter, IconGithub } from "@components/Icons";
 
 export const Header = () => {
   return (
-    <header className="bg-primary flex items-center h-14 p-2">
-      <nav className="h-full w-full flex items-center justify-between font-mono">
+    <header className="flex items-center flex-none p-2 bg-primary h-14">
+      <nav className="flex items-center justify-between w-full h-full font-mono">
         <Link href="/">
-          <a className="h-full outline-none border-primary border-2 rounded-full hover:opacity-70 focus:opacity-70 focus:outline-none hover:border-frontPrimary focus:border-frontPrimary box-border transition duration-500 ease-in-out">
+          <a className="box-border h-full transition duration-500 ease-in-out border-2 rounded-full outline-none border-primary hover:opacity-70 focus:opacity-70 focus:outline-none hover:border-frontPrimary focus:border-frontPrimary">
             <img
               title="home"
-              className="rounded-full h-full"
+              className="h-full rounded-full"
               alt="poladuco"
               src="https://github.com/pducolin.png"
             />
           </a>
         </Link>
-        <div className="flex flex-row flex-grow justify-self-center space-x-8 md:space-x-20 justify-center">
+        <div className="flex flex-row justify-center flex-grow space-x-8 justify-self-center md:space-x-20">
           <Link href="/">
-            <a title='home' alt='home' className="outline-none text-frontSecondary hover:text-frontPrimary focus:text-frontPrimary border-b-2 border-opacity-0 border-frontPrimary hover:border-opacity-100 focus:border-opacity-100 p-1 transition duration-500 ease-in-out">
+            <a
+              title="home"
+              alt="home"
+              className="p-1 transition duration-500 ease-in-out border-b-2 border-opacity-0 outline-none text-frontSecondary hover:text-frontPrimary focus:text-frontPrimary border-frontPrimary hover:border-opacity-100 focus:border-opacity-100"
+            >
               Home
             </a>
           </Link>
-          <span className="text-frontSecondary pointer-events-none">|</span>
+          <span className="pointer-events-none text-frontSecondary">|</span>
           <Link href="/about">
-            <a title='about' alt='about' className="outline-none text-frontSecondary hover:text-frontPrimary focus:text-frontPrimary border-b-2 border-opacity-0 border-frontPrimary hover:border-opacity-100 focus:border-opacity-100 p-1 transition duration-500 ease-in-out">
+            <a
+              title="about"
+              alt="about"
+              className="p-1 transition duration-500 ease-in-out border-b-2 border-opacity-0 outline-none text-frontSecondary hover:text-frontPrimary focus:text-frontPrimary border-frontPrimary hover:border-opacity-100 focus:border-opacity-100"
+            >
               About
             </a>
           </Link>
         </div>
-        <div className="flex flex-row space-x-1 md:space-x-2 mr-2">
+        <div className="flex flex-row mr-2 space-x-1 md:space-x-2">
           <a
             href="https://twitter.com/poladuco"
             target="_blank"
             rel="noopener noreferrer"
-            className="outline-none border-b-2 border-opacity-0 border-frontPrimary hover:border-opacity-100 focus:border-opacity-100 p-1 transition duration-500 ease-in-out"
+            className="p-1 transition duration-500 ease-in-out border-b-2 border-opacity-0 outline-none border-frontPrimary hover:border-opacity-100 focus:border-opacity-100"
           >
             <IconTwitter
               size="20px"
@@ -44,7 +52,7 @@ export const Header = () => {
             href="https://github.com/pducolin"
             target="_blank"
             rel="noopener noreferrer"
-            className="outline-none border-b-2 border-opacity-0 border-frontPrimary hover:border-opacity-100 focus:border-opacity-100 p-1 transition duration-500 ease-in-out "
+            className="p-1 transition duration-500 ease-in-out border-b-2 border-opacity-0 outline-none border-frontPrimary hover:border-opacity-100 focus:border-opacity-100 "
           >
             <IconGithub
               size="20px"
