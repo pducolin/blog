@@ -102,3 +102,18 @@ export const IconLove = ({ size, className }) => (
     <path d="M10 3.22l-.61-.6a5.5 5.5 0 00-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 00-7.78-7.77l-.61.61z"></path>
   </svg>
 );
+
+export const IconCalendar = ({ size, className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 20 20"
+    width={size}
+    height={size}
+    className={className}
+    aria-labelledby="calendarTitle"
+    role="img"
+  >
+    <title id="calendarTitle">Written</title>
+    <path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 012 2v14a2 2 0 01-2 2H3a2 2 0 01-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"></path>
+  </svg>
+);
