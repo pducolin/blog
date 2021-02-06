@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
 import { IconCalendar } from "./Icons";
+import Link from "next/link";
+import React from "react";
 
 export const PostCard = ({ slug, frontmatter }) => (
   <li key={slug} className="box-border w-1/2">

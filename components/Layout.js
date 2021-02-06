@@ -1,11 +1,12 @@
-import Head from "next/head";
-import { Header } from "@components/Header";
 import {
   IconLove,
   IconNextJS,
   IconReact,
   IconTailwindCss,
 } from "@components/Icons";
+
+import Head from "next/head";
+import { Header } from "@components/Header";
 
 export const Layout = ({ children, pageTitle, ...props }) => {
   return (

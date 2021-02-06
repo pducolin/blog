@@ -1,5 +1,6 @@
+import { IconGithub, IconTwitter } from "@components/Icons";
+
 import Link from "next/link";
-import { IconTwitter, IconGithub } from "@components/Icons";
 
 export const Header = () => {
   return (
