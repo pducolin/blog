@@ -1,23 +1,16 @@
-import {
-  IconLove,
-  IconNextJS,
-  IconReact,
-  IconTailwindCss,
-} from "@components/Icons";
+import { IconLove, IconNextJS, IconReact, IconTailwindCss } from "@components/Icons"
 
-import Head from "next/head";
-import { Header } from "@components/Header";
+import Head from "next/head"
+import { Header } from "@components/Header"
 
-export const Layout = ({ children, pageTitle, ...props }) => {
+export const Layout = ({ children, pageTitle }) => {
+
   return (
     <>
       <div className="min-h-screen bg-backgroundSecondary">
         <div className="flex flex-col min-h-screen m-auto bg-backgroundPrimary md:w-2/3 xl:1/2">
           <Head>
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1"
-            />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <title>{pageTitle}</title>
           </Head>
           <section className="flex-grow h-full">
@@ -38,5 +31,5 @@ export const Layout = ({ children, pageTitle, ...props }) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}

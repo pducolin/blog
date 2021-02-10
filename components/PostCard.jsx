@@ -1,6 +1,6 @@
-import { IconCalendar } from "./Icons";
-import Link from "next/link";
-import React from "react";
+import Link from "next/link"
+import React from "react"
+import { IconCalendar } from "./Icons"
 
 export const PostCard = ({ slug, frontmatter }) => (
   <li key={slug} className="box-border w-1/2">
@@ -22,10 +22,7 @@ export const PostCard = ({ slug, frontmatter }) => (
                 {frontmatter.title}
               </span>
               <div className="align-middle text-frontSecondary flex flex-row flex-none">
-                <IconCalendar
-                  size={14}
-                  className="fill-current text-frontSecondary mr-1"
-                />
+                <IconCalendar size={14} className="fill-current text-frontSecondary mr-1" />
                 <span className="font-mono text-xs text-frontSecondary leading-tight ">
                   {frontmatter.date}
                 </span>
@@ -36,4 +33,4 @@ export const PostCard = ({ slug, frontmatter }) => (
       </a>
     </Link>
   </li>
-);
+)

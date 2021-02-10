@@ -1,4 +1,4 @@
-const colors = require("tailwindcss/colors");
+const colors = require("tailwindcss/colors")
 
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -11,7 +11,7 @@ module.exports = {
       frontSecondary: "#444054",
       backgroundPrimary: colors.white,
       backgroundSecondary: "#f8edeb",
-      red: colors.red,
+      red: colors.red
     },
     extend: {
       maxHeight: {
@@ -21,9 +21,9 @@ module.exports = {
         "3/4": "75%",
         "1/3": "33.333333%",
         "2/3": "66.666667%",
-        full: "100%",
-      },
-    },
+        full: "100%"
+      }
+    }
   },
   variants: {
     fill: ["hover", "focus"],
@@ -31,8 +31,8 @@ module.exports = {
       borderOpacity: ["group-focus"],
       height: ["group-hover", "group-focus"],
       backgroundColor: ["group-focus"],
-      whitespace: ["group-hover", "group-focus"],
-    },
+      whitespace: ["group-hover", "group-focus"]
+    }
   },
-  plugins: [],
-};
+  plugins: []
+}

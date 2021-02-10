@@ -1,11 +1,23 @@
 {
+  // ...
+  // Run formatter when you save code changes
   "editor.formatOnSave": true,
-  "spellright.language": [
-    "en"
+  // Disable default formatting (ESLint formatting will be used instead)
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  // Auto-fix issues with ESLint when you save code changes
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+  },
+  // Prevent double-formatting and potential ESLint <> Prettier conflicts (ESLint formatting will be used instead)
+  "prettier.disableLanguages": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
   ],
-  "spellright.documentTypes": [
-    "markdown",
-    "latex",
-    "plaintext"
-  ]
 }
