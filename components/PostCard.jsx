@@ -1,6 +1,6 @@
+import { IconCalendar } from "@components/Icons"
 import Link from "next/link"
 import React from "react"
-import { IconCalendar } from "./Icons"
 
 export const PostCard = ({ slug, frontmatter }) => (
   <li key={slug} className="box-border w-1/2">

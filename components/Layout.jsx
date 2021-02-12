@@ -4,11 +4,10 @@ import Head from "next/head"
 import { Header } from "@components/Header"
 
 export const Layout = ({ children, pageTitle }) => {
-
   return (
     <>
       <div className="min-h-screen bg-backgroundSecondary">
-        <div className="flex flex-col min-h-screen m-auto bg-backgroundPrimary md:w-2/3 xl:1/2">
+        <div className="flex flex-col min-h-screen m-auto bg-backgroundPrimary md:w-2/3 xl:w-3/5">
           <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <title>{pageTitle}</title>

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 
-export const IconTwitter = ({ size = '40px', className = '' }) => (
+export const IconTwitter = ({ size = "40px", className = "" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     id="Logo"
@@ -115,5 +115,20 @@ export const IconCalendar = ({ size, className }) => (
   >
     <title id="calendarTitle">Written</title>
     <path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 012 2v14a2 2 0 01-2 2H3a2 2 0 01-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z" />
+  </svg>
+)
+
+export const IconBack = ({ size, className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 20 20"
+    width={size}
+    height={size}
+    className={className}
+    aria-labelledby="backTitle"
+    role="img"
+  >
+    <title id="backTitle">Back</title>
+    <path d="M3.828 9l6.071-6.071-1.414-1.414L0 10l.707.707 7.778 7.778 1.414-1.414L3.828 11H20V9H3.828z"></path>
   </svg>
 )
