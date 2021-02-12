@@ -1,6 +1,7 @@
 import { IconCalendar } from "@components/Icons"
 import Link from "next/link"
 import React from "react"
+import moment from "moment"
 
 export const PostCard = ({ slug, frontmatter }) => (
   <li key={slug} className="box-border w-1/2">
@@ -24,7 +25,9 @@ export const PostCard = ({ slug, frontmatter }) => (
               <div className="align-middle text-frontSecondary flex flex-row flex-none">
                 <IconCalendar size={14} className="fill-current text-frontSecondary mr-1" />
                 <span className="font-mono text-xs text-frontSecondary leading-tight ">
-                  {frontmatter.date}
+                  {moment(frontmatter.date).year() === moment().year()
+                    ? moment(frontmatter.date).format("MMM D")
+                    : moment(frontmatter.date).format("MMM D, YYYY")}
                 </span>
               </div>
             </div>
