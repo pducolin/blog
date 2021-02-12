@@ -9,7 +9,7 @@ const About = ({ title, description }) => {
       <h2 className="font-mono italic text-center text-md text-frontSecondary">{description}</h2>
       <main className="mx-4 my-8 font-mono">
         <p>
-          I&aposm an Italian software developper leaving in Paris. I love learning new technologies,
+          I am an Italian software developper leaving in Paris. I love learning new technologies,
           trying different languages and making software that reduces friction.
         </p>
         <br />
