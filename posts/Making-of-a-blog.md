@@ -16,3 +16,4 @@ Taking note of all frameworks / tools I've used so far
 * Css Tricks
 * @tailwindcss/typography
 * svg to jsx
+* medium exporter
