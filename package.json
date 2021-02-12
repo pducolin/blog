@@ -43,6 +43,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^5.0.9",
     "lint-staged": "^10.5.4",
+    "mediumexporter": "^0.1.6",
     "prettier": "^1.16.4"
   },
   "husky": {
