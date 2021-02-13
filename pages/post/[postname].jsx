@@ -22,29 +22,33 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
 
   return (
     <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
-      {/* <Link href="/">
-        <a className="group flex flex-row justify-start mx-4 md:mx-6 lg:mx-8 mt-4 outline-none">
-          <div className=" text-frontSecondary flex flex-row items-center justify-start">
-            <IconBack
-              size={20}
-              className="mr-2 fill-current text-frontSecondary group-hover:fill-current group-hover:text-frontPrimary group-focus:border-opacity-100 group-focus:fill-current fgroup-ocus:text-frontPrimary"
-            />
-            <span className="transition-all duration-500 ease-in-out border-b-2 border-opacity-0 border-frontPrimary group-hover:border-opacity-100 group-focus:border-opacity-100 group-hover:text-frontPrimary group-focus:text-frontPrimary  p-1">
-              Back to post list
-            </span>
+      <div className="w-full h-52 relative">
+        <img
+          src={frontmatter.titleImage.path}
+          className="h-full object-cover w-full object-center shadow-sm absolute"
+          alt={frontmatter.titleImage.alt}
+        />
+        <div className="absolute bottom-0 left-0 w-2/3 bg-secondary justify-center flex flex-col pl-4 gap-1 py-2 mb-2">
+          <h1
+            className="
+          font-mono
+          text-3xl
+          font-semibold
+          text-left
+          text-frontSecondary"
+          >
+            {frontmatter.title}
+          </h1>
+          <div className="items-center text-frontSecondary flex flex-row justify-start gap-1">
+            <IconCalendar size={14} className="fill-current text-frontSecondary" />
+            <h2 className="italic text-sm text-frontSecondary">
+              {moment(frontmatter.date).format("MMMM D, YYYY")}
+            </h2>
           </div>
-        </a>
-      </Link> */}
-      <article className="my-8">
-        <h1 className="font-mono m-4 md:mx-8 lg:mx-12 text-3xl font-semibold text-center text-frontSecondary">
-          {frontmatter.title}
-        </h1>
-        <div className="items-center text-frontSecondary flex flex-row justify-center mb-4 gap-1">
-          <IconCalendar size={14} className="fill-current text-frontSecondary" />
-          <h2 className="italic text-sm text-frontSecondary">
-            {moment(frontmatter.date).format("MMMM D, YYYY")}
-          </h2>
         </div>
+      </div>
+
+      <article className="my-4">
         <div className="prose mx-6 md:mx-8 lg:mx-12 max-w-none">
           <ReactMarkdown source={markdownBody} renderers={renderers} />
         </div>

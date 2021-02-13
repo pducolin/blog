@@ -1,6 +1,6 @@
-import { IconGithub, IconTwitter } from '@components/Icons'
+import { IconGithub, IconTwitter } from "@components/Icons"
 
-import Link from 'next/link'
+import Link from "next/link"
 
 export const Header = () => {
   return (

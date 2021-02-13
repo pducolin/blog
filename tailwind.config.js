@@ -34,5 +34,5 @@ module.exports = {
       whitespace: ["group-hover", "group-focus"]
     }
   },
-  plugins: [require('@tailwindcss/typography')]
+  plugins: [require("@tailwindcss/typography")]
 }
