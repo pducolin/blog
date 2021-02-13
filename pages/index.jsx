@@ -12,7 +12,11 @@ const Index = ({ posts, title, description }) => {
         {description}
       </h2>
       <main>
-        <PostList posts={posts.filter((post) => !post.frontmatter.draft)} />
+        <PostList
+          posts={posts.filter(
+            (post) => process.env.NODE_ENV !== "production" || !post.frontmatter.draft
+          )}
+        />
       </main>
     </Layout>
   )
