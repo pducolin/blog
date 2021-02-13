@@ -12,7 +12,7 @@ export const Layout = ({ children, pageTitle }) => {
           <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <title>{pageTitle}</title>
-            <Analytics />
+            {process.env.NODE_ENV === "production" && <Analytics />}
           </Head>
           <section className="flex-grow h-full">
             <Header />
