@@ -10,12 +10,13 @@ const About = ({ title, description }) => {
       <main className="mx-4 my-8 font-mono">
         <p>
           I am an Italian software developper leaving in Paris. I love learning new technologies,
-          trying different languages and making software that reduces friction.
+          trying different languages and crafting software that reduces friction for both users and
+          developers.
         </p>
         <br />
         <p>
-          I am a co-organizer at Ladies of Code Paris and QueerJS, always looking for new voices
-          from minorities in tech.
+          I am a co-organizer at Ladies of Code Paris and QueerJS, wishing to have more and more
+          folks from under represented groups joining and staying in tech.
         </p>
         <br />
         <p>
