@@ -1,5 +1,6 @@
 import { IconLove, IconNextJS, IconReact, IconTailwindCss } from "@components/Icons"
 
+import { Analytics } from "@components/Analytics"
 import Head from "next/head"
 import { Header } from "@components/Header"
 
@@ -11,6 +12,7 @@ export const Layout = ({ children, pageTitle }) => {
           <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <title>{pageTitle}</title>
+            <Analytics />
           </Head>
           <section className="flex-grow h-full">
             <Header />
