@@ -24,7 +24,7 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
     <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
       <div className="w-full h-52 relative">
         <img
-          src={frontmatter.titleImage.path}
+          src={frontmatter.titleImage.path.big}
           className="h-full object-cover w-full object-center shadow-sm absolute"
           alt={frontmatter.titleImage.alt}
         />

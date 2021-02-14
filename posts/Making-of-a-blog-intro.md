@@ -3,7 +3,9 @@ title: "Making of a blog: an intro"
 author: "poladuco"
 date: "2021-02-13"
 titleImage: 
-  path: /assets/images/icons8-team-seDjj4dmC9s-unsplash.jpg
+  path: 
+    big: /assets/images/icons8-team-seDjj4dmC9s-unsplash.webp
+    small: /assets/images/icons8-team-seDjj4dmC9s-unsplash_small.webp
   alt: Cooking pasta by Icons8 Team from Unsplash
 ---
 

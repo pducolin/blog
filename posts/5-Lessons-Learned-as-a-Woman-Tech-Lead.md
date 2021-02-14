@@ -3,7 +3,9 @@ title: "5 Lessons Learned as a Woman Tech Lead"
 author: "poladuco"
 date: "2020-06-09"
 titleImage: 
-  path: /assets/images/pexels-miguel-á-padriñán-194094.jpg
+  path: 
+    big: /assets/images/pexels-miguel-á-padriñán-194094.webp
+    small: /assets/images/pexels-miguel-á-padriñán-194094_small.webp
   author: Miguel Á. Padriñán
   authorLink: https://www.pexels.com/@padrinan?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels
   website: Pexels
