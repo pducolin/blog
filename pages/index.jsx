@@ -1,8 +1,10 @@
 import "tailwindcss/tailwind.css"
 
 import { Layout } from "@components/Layout"
-import { PostList } from "@components/PostList"
+import dynamic from "next/dynamic"
 import matter from "gray-matter"
+
+const DynamicPostList = dynamic(() => import("../components/PostList").then((mod) => mod.PostList))
 
 const Index = ({ posts, title, description }) => {
   return (
@@ -12,7 +14,7 @@ const Index = ({ posts, title, description }) => {
         {description}
       </h2>
       <main>
-        <PostList
+        <DynamicPostList
           posts={posts.filter(
             (post) => process.env.NODE_ENV !== "production" || !post.frontmatter.draft
           )}
