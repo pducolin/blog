@@ -36,4 +36,8 @@ Cooking have recipes and ingredients list. We can document tech project can and 
 
 - [Css Tricks](https://css-tricks.com/)
 
+🚀 Deployment:
+
+- [Netlify](https://www.netlify.com/)
+
 In the following articles I will share in details how I mixed all of the above to create this website. Stay tuned!
