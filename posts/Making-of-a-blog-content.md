@@ -35,9 +35,11 @@ Cooking have recipes and ingredients list. We can document tech project can and 
 - [microanalytics](https://microanalytics.io)
 
 🚚 Importing my articles from Medium:
+
 - [medium exporter](https://github.com/xdamman/mediumexporter)
 
 🎯 For centering a div:
+
 - [Css Tricks](https://css-tricks.com/)
 
 In the following articles I will share in details how I mixed all of the above to create this website. Stay tuned!

@@ -45,7 +45,7 @@ Second lesson, don’t be the explorer; encourage your team to explore. My first
 
 ## Be a filter
 
-![](https://cdn-images-1.medium.com/max/2000/0*HDPiZgZC4CVRvwzE.png)
+![Schema of you as a filter between inputs and the team](https://cdn-images-1.medium.com/max/2000/0*HDPiZgZC4CVRvwzE.png)
 
 Third tip, keep your steam out of your team. Becoming a Tech Lead to me meant being a buffer between the inside and the outside of the team:
 
@@ -65,7 +65,7 @@ Don’t take on every single job that is asked of you. When you lead by example 
 
 ## Reach out to communities
 
-![](https://cdn-images-1.medium.com/max/2048/0*_EL3c6Cx3e9Ywsmj.jpg)
+![Speaking at QueerJS Paris 2019](https://cdn-images-1.medium.com/max/2048/0*_EL3c6Cx3e9Ywsmj.jpg)
 
 The most important thing to me is bringing passion and enthusiasm. To do that I go to conferences and participate to local meetups. I have never come back from a conference without new ideas to implement. At C++ Italia I found out about [WinDbg Preview](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-using-windbg-preview) and time travel debugging — that became my first ever meetup talk and a [blog post](https://blog.dashlane.com/how-to-find-fix-bugs-in-commercial-software/). At React Finland I first heard about design systems-and since then I pushed to implement one at Dashlane. Go to conferences, be a speaker, and encourage your team to do the same. Start from local meetups. It will be source of inspiration, because other speakers will bring their passion, too. I also recently found Twitter as a great source of tech news and awesome people. It’s thanks to Twitter that I discovered QueerJS, a wonderful community that I am now proudly a part of.
 
