@@ -7,7 +7,7 @@ titleImage:
   alt: Cooking pasta by Icons8 Team from Unsplash
 ---
 
-What do software development and cooking have in common? They are both my passion. They are two activities that are helping me a lot coping with Coronacene. Plus, if cooking have recipes and ingredients list, tech project can be documented and described in order to be reproduced. I recently - aka one year ago - decided to make my own blog, starting by buying my own domain. As soon as I found energy to actually make it, I kept track of the journey to share with others willing to ~make pasta~ create theirs.
+What do software development and cooking have in common? They are both my passions. They are two activities that are helping me a lot coping with Coronacene. Plus, if cooking have recipes and ingredients list, tech project can be documented and described in order to be reproduced. I recently - aka one year ago - decided to make my own blog, starting by buying my own domain. As soon as I found energy to actually make it, I kept track of the journey to share with others willing to ~make pasta~ create theirs.
 
 ## Ingredients:
 
