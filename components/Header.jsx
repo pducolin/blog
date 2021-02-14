@@ -10,8 +10,10 @@ export const Header = () => {
           <a className="box-border h-full transition duration-500 ease-in-out border-2 rounded-full outline-none border-primary hover:opacity-70 focus:opacity-70 focus:outline-none hover:border-frontPrimary focus:border-frontPrimary">
             <img
               title="home"
-              className="h-full rounded-full"
+              className="h-full rounded-full object-cover"
               alt="poladuco"
+              height="36px"
+              width="36px"
               src="https://github.com/pducolin.png"
             />
           </a>
