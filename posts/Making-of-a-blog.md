@@ -1,25 +1,35 @@
 ---
-draft: true
-title: "Making of a blog"
+title: "Making of a blog: an intro"
 author: "poladuco"
-date: "2021-02-11"
+date: "2021-02-13"
 titleImage: 
   path: /assets/images/icons8-team-seDjj4dmC9s-unsplash.jpg
   alt: Cooking pasta by Icons8 Team from Unsplash
 ---
 
-I have 3 big passions: software development, cooking and sport. What do these 3 have in commmon? They can all be planned. Cooking have recipes and ingredients list to buy, sport challenges require a training plan. Being a bit of a control freak I love planning, and I love keeping track of how I made something. So here's my journey through this blog.
+What do software development and cooking have in common? They are both my passion. They are two activities that are helping me a lot coping with Coronacene. Plus, if cooking have recipes and ingredients list, tech project can be documented and described in order to be reproduced. I recently - aka one year ago - decided to make my own blog, starting by buying my own domain. As soon as I found energy to actually make it, I kept track of the journey to share with others willing to ~make pasta~ create theirs.
 
-First thing first, the ingredients:
+## Ingredients:
 
-* [React](https://reactjs.org/)
-* [NextJs](https://nextjs.org/)
+📃 The content:
+- [React](https://reactjs.org/)
+- [NextJs](https://nextjs.org/)
+- [React Markdown](https://github.com/remarkjs/react-markdown)
+
+🎨 The design:
 * [TailwindCss](https://tailwindcss.com/)
-* [React Markdown](https://github.com/remarkjs/react-markdown)
 * [Coolors](https://coolors.co/)
 * [zondicons](https://www.zondicons.com/)
+* [svg to jsx](https://svg2jsx.com/)
 * [@tailwindcss/typography](@tailwindcss/typography)
-* [medium exporter](https://github.com/xdamman/mediumexporter)
+
+📈 Analytics:
 * [microanalytics](https://microanalytics.io)
-* Css Tricks
-* svg to jsx
+
+🚚 Importing my articles from Medium:
+* [medium exporter](https://github.com/xdamman/mediumexporter)
+
+🎯 For centering a div:
+* [Css Tricks](https://css-tricks.com/)
+
+In the following articles I will share in details how I mixed all of the above to create this website. Stay tuned!
