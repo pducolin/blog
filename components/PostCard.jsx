@@ -24,7 +24,11 @@ export const PostCard = ({ slug, frontmatter }) => (
                 {frontmatter.title}
               </span>
               <div className="align-middle text-frontSecondary flex flex-row flex-none">
-                <IconCalendar size={14} className="fill-current text-frontSecondary mr-1" />
+                <IconCalendar
+                  id={`calendarIcon_${slug}`}
+                  size={14}
+                  className="fill-current text-frontSecondary mr-1"
+                />
                 <span className="font-mono text-xs text-frontSecondary leading-tight ">
                   {moment(frontmatter.date).year() === moment().year()
                     ? moment(frontmatter.date).format("MMM D")

@@ -8,6 +8,7 @@ import ReactMarkdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import matter from "gray-matter"
 import moment from "moment"
+import { useRouter } from "next/router"
 
 const CodeRenderer = ({ language, value }) => (
   <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>
@@ -18,10 +19,19 @@ const renderers = {
 }
 
 export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdownBody }) {
+  const router = useRouter()
+  const { pid } = router.query
   if (!frontmatter) return <></>
 
   return (
-    <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
+    <Layout
+      pageTitle={`${siteTitle} | ${frontmatter.title}`}
+      description={frontmatter.description}
+      previewImage={frontmatter.titleImage.path.big}
+      currentURL={`https://poladuco.com/${pid}`}
+      twitterHandle="PolaDuco"
+      isPost
+    >
       <div className="w-full h-52 relative">
         <img
           src={frontmatter.titleImage.path.big}

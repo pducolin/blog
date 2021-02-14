@@ -6,10 +6,16 @@ import matter from "gray-matter"
 
 const DynamicPostList = dynamic(() => import("../components/PostList").then((mod) => mod.PostList))
 
-const Index = ({ posts, title, description }) => {
+const Index = ({ posts, title, description, previewImage }) => {
   return (
-    <Layout pageTitle={title}>
-      <h1 className="my-4 font-mono text-4xl font-medium text-center">Welcome to my blog</h1>
+    <Layout
+      pageTitle={title}
+      description={description}
+      currentURL="https://poladuco.com"
+      twitterHandle="PolaDuco"
+      previewImage={previewImage}
+    >
+      <h1 className="my-4 font-mono text-4xl font-medium text-center">poladuco.com</h1>
       <h2 className="font-mono italic text-center text-md text-frontSecondary my-4">
         {description}
       </h2>
@@ -51,7 +57,8 @@ export async function getStaticProps() {
     props: {
       posts,
       title: configData.default.title,
-      description: configData.default.description
+      description: configData.default.description,
+      previewImage: configData.default.previewImage
     }
   }
 }

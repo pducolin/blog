@@ -2,10 +2,16 @@ import "tailwindcss/tailwind.css"
 
 import { Layout } from "@components/Layout"
 
-const About = ({ title, description }) => {
+const About = ({ title, description, previewImage }) => {
   return (
-    <Layout pageTitle={title}>
-      <h1 className="my-4 font-mono text-4xl font-medium text-center">Welcome to my blog</h1>
+    <Layout
+      pageTitle={title}
+      description={description}
+      currentURL="https://poladuco.com/about"
+      twitterHandle="PolaDuco"
+      previewImage={previewImage}
+    >
+      <h1 className="my-4 font-mono text-4xl font-medium text-center">poladuco.com</h1>
       <h2 className="font-mono italic text-center text-md text-frontSecondary">{description}</h2>
       <main className="mx-4 my-8 font-mono">
         <p>
@@ -35,7 +41,8 @@ export async function getStaticProps() {
   return {
     props: {
       title: configData.default.title,
-      description: configData.default.description
+      description: configData.default.description,
+      previewImage: configData.default.previewImage
     }
   }
 }

@@ -4,13 +4,25 @@ import { Analytics } from "@components/Analytics"
 import Head from "next/head"
 import { Header } from "@components/Header"
 
-export const Layout = ({ children, pageTitle }) => {
+export const Layout = ({ children, pageTitle, currentURL, description, previewImage, isPost }) => {
   return (
     <>
       <div className="min-h-screen bg-backgroundSecondary">
         <div className="flex flex-col min-h-screen m-auto bg-backgroundPrimary md:w-2/3 xl:w-3/5">
           <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="description" content={description} />
+            {/* Twitter */}
+            <meta name="twitter:card" content="summary" key="twcard" />
+            <meta name="twitter:creator" content="@PolaDuco" key="twhandle" />
+
+            {/* Open Graph */}
+            <meta property="og:url" content={currentURL} key="ogurl" />
+            <meta property="og:image" content={previewImage} key="ogimage" />
+            <meta property="og:site_name" content="poladuco.com" key="ogsitename" />
+            <meta property="og:title" content={pageTitle} key="ogtitle" />
+            <meta property="og:description" content={description} key="ogdesc" />
+            <meta property="og:type" content={isPost ? "article" : "website"} key="ogtype" />
             <title>{pageTitle}</title>
             {process.env.NODE_ENV === "production" && <Analytics />}
           </Head>
