@@ -2,14 +2,10 @@
 title: "5 Lessons Learned as a Woman Tech Lead"
 author: "poladuco"
 date: "2020-06-09"
-titleImage: 
+heroImage: 
   path: 
     big: /assets/images/pexels-miguel-á-padriñán-194094.webp
     small: /assets/images/pexels-miguel-á-padriñán-194094_small.webp
-  author: Miguel Á. Padriñán
-  authorLink: https://www.pexels.com/@padrinan?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels
-  website: Pexels
-  websiteLink: https://www.pexels.com/photo/paper-boats-on-solid-surface-194094/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels
   alt: Paper boats on a table by Miguel Á. Padriñán from Pexels
 original:
   link: https://blog.dashlane.com/5-lessons-learned-as-a-woman-tech-lead/

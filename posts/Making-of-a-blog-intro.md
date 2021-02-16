@@ -2,7 +2,7 @@
 title: "Making of a blog: an intro"
 author: "poladuco"
 date: "2021-02-13"
-titleImage: 
+heroImage: 
   path: 
     big: /assets/images/icons8-team-seDjj4dmC9s-unsplash.webp
     small: /assets/images/icons8-team-seDjj4dmC9s-unsplash_small.webp
@@ -18,7 +18,7 @@ Cooking have recipes and ingredients list. We can document tech project can and 
 📃 The content:
 
 - [React](https://reactjs.org/)
-- [NextJs](https://nextjs.org/)
+- [Next.js](https://nextjs.org/)
 - [React Markdown](https://github.com/remarkjs/react-markdown)
 
 🎨 The design:

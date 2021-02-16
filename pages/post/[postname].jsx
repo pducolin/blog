@@ -27,16 +27,16 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
     <Layout
       pageTitle={`${siteTitle} | ${frontmatter.title}`}
       description={frontmatter.description}
-      previewImage={frontmatter.titleImage.path.big}
+      previewImage={frontmatter.heroImage.path.big}
       currentURL={`https://poladuco.com/${pid}`}
       twitterHandle="PolaDuco"
       isPost
     >
       <div className="w-full h-52 relative">
         <img
-          src={frontmatter.titleImage.path.big}
+          src={frontmatter.heroImage.path.big}
           className="h-full object-cover w-full object-center shadow-sm absolute"
-          alt={frontmatter.titleImage.alt}
+          alt={frontmatter.heroImage.alt}
         />
         <div className="absolute bottom-0 left-0 w-2/3 bg-secondary justify-center flex flex-col pl-4 gap-1 py-2 mb-2">
           <h1
@@ -60,7 +60,7 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
 
       <article className="my-4">
         <div className="prose mx-6 md:mx-8 lg:mx-12 max-w-none">
-          <ReactMarkdown source={markdownBody} renderers={renderers} />
+          <ReactMarkdown renderers={renderers}>{markdownBody}</ReactMarkdown>
         </div>
         {frontmatter.original && (
           <div className="items-center text-frontSecondary flex flex-row justify-center mt-4 text-sm text-frontSecondarymr-1 italic gap-1">

@@ -11,7 +11,7 @@ export const PostCard = ({ slug, frontmatter }) => (
           <div className="flex flex-col w-full h-full border-2 border-frontPrimary border-opacity-0 group-focus:border-opacity-100 box-border">
             <img
               className="object-cover w-full transition-all object-center duration-500 ease-in-out h-2/3 group-hover:opacity-20 group-focus:opacity-20 flex-none group-hover:h-1/3 group-focus:h-1/3"
-              src={frontmatter.titleImage.path.small}
+              src={frontmatter.heroImage.path.small}
               alt={frontmatter.title}
               width="600px"
               height="400px"
