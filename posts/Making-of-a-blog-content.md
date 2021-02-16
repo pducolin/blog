@@ -43,7 +43,7 @@ You can argue that a blog is made of pages dynamically created based on a list o
 
 It took me some time to understand what **server-side** vs **static** vs **client-side* rendering meant and how Next.js works under the hood. [Rendering on the web](https://developers.google.com/web/updates/2019/02/rendering-on-the-web) from Google developers blog explains in details all different renderings.
 
-In my pages I use [getStaticProps](https://github.com/pducolin/blog/blob/main/pages/post/%5Bpostname%5D.jsx#L80) and [getStaticPaths](https://github.com/pducolin/blog/blob/main/pages/post/%5Bpostname%5D.jsx#L96) to get dynamic informations, such as the list of post names. These two functions are called by Next at **build time** and used to pre-render Javascript pages using the props returned. 
+In my pages I use [getStaticProps](https://github.com/pducolin/blog/blob/main/pages/post/%5Bpostname%5D.jsx#L80) and [getStaticPaths](https://github.com/pducolin/blog/blob/main/pages/post/%5Bpostname%5D.jsx#L96) to get dynamic informations, such as the list of post names. These two functions are called by Next at **build time** and used to pre-render Javascript pages using the props returned.
 
 By running `next build && next export` the magic happens, and next generates the HTML static pages:
 
