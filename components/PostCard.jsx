@@ -18,7 +18,7 @@ export const PostCard = ({ slug, frontmatter }) => (
             />
             <div className="flex flex-col justify-between w-full h-1/3 group-hover:h-2/3 group-focus:h-2/3 px-3 py-2 flex-grow transition-all duration-500 ease-in-out bg-backgroundSecondary group-hover:bg-secondary group-focus:bg-secondary">
               <span
-                className="font-mono text-lg leading-tight transition-all duration-500 ease-in-out overflow-ellipsis overflow-hidden whitespace-nowrap group-hover:whitespace-normal group-focus:whitespace-normal"
+                className="font-mono text-md leading-tight transition-all duration-500 ease-in-out overflow-ellipsis overflow-hidden whitespace-nowrap group-hover:whitespace-normal group-focus:whitespace-normal"
                 title={frontmatter.title}
               >
                 {frontmatter.title}
