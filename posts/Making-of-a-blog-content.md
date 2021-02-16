@@ -109,5 +109,7 @@ yarn build && yarn export
 
 will generate one page per markdown file 🎉
 
+Next post will be about the design, from picking colors to TailwindCss and @tailwindcss/typography. Stay tuned!
+
 [pages_folder]: https://raw.githubusercontent.com/pducolin/blog/main/public/assets/images/nextjs_pages.webp "This project has 2 pages (`index.js` and `about.js`)"
 [out_folder]: https://raw.githubusercontent.com/pducolin/blog/main/public/assets/images/build_and_export.webp "This project out folder"
