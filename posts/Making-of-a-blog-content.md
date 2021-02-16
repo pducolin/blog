@@ -11,7 +11,7 @@ heroImage:
 
 As listed in the [intro](https://www.poladuco.com/Making-of-a-blog-intro), I created this blog using [React](https://reactjs.org/), [Next.js](https://nextjs.org/) and [Markdown](https://github.com/remarkjs/react-markdown).
 
-I followed [this incredibly well done tutorial](https://www.netlify.com/blog/2020/05/04/building-a-markdown-blog-with-next-9.4-and-netlify/) by [Cassidoo](https://twitter.com/cassidoo) on Netflify's blog.
+I followed [this incredibly well done tutorial](https://www.netlify.com/blog/2020/05/04/building-a-markdown-blog-with-next-9.4-and-netlify/) by [Cassidoo](https://twitter.com/cassidoo) on Netlify's blog.
 
 Following are more details and the rationale behind each choice.
 
