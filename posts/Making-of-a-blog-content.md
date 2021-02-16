@@ -11,39 +11,172 @@ heroImage:
 
 As listed in the [intro](https://www.poladuco.com/Making-of-a-blog-intro), I created this blog using [React](https://reactjs.org/), [Next.js](https://nextjs.org/) and [Markdown](https://github.com/remarkjs/react-markdown).
 
-I followed [this incredibly well done tutorial](https://www.netlify.com/blog/2020/05/04/building-a-markdown-blog-with-next-9.4-and-netlify/) by [Cassidoo](https://twitter.com/cassidoo) on Netlify's blog.
+I followed [the Netlify's tutorial](https://www.netlify.com/blog/2020/05/04/building-a-markdown-blog-with-next-9.4-and-netlify/) by [Cassidoo](https://twitter.com/cassidoo), and it is so well written that I strongly recommend it. There's even a [ready-to-clone Github](https://github.com/cassidoo/next-netlify-blog-starter).
 
-Following are more details and the rationale behind each choice.
+It took me some time to understand how the 3 work together, here's what I learned. No need to go through all this, using the linked tutorial will get you ready to go and write your blog's content. If you're curious as I am, and you are new to any of these technologies you might find the following interesting.
+
+## Let me jump to
+
+- [React](#React)
+- [Markdown](#Markdown)
+- [Next.js](#Next.js)
+- [React + Next.js + Markdown = ❤️](#React-+-Next.js-+-Markdown-=-❤️)
 
 ## React
 
 I picked React because I was already familiar with it, having used it for work and personal projects.
 
+React uses Javascript to render HTML elements at runtime; few years ago I used jQuery in a project and it has some of its concepts.
+
+To understand how it works, let's take an HTML document as example:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Page title, this appears in the browser tab</title>
+
+    // React script, adds its top level API
+    <script src="https://unpkg.com/react@^17/umd/react.production.min.js"></script>
+    // ReactDOM script, adds functions to interact with the DOM (Document Object Model) 
+    <script src="https://unpkg.com/react-dom@17.0.1/umd/react-dom.production.min.js"></script>
+    // Babel script, enables using ES6+ JavaScript in old browsers like the evil IE11
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  </head>
+
+  <body>
+    <div id="root">
+      // React code will add content here
+    </div>
+
+    <script type="text/babel">
+      // React code will go here
+    </script>
+  </body>
+</html>
+```
+
+Let's add a `header` HTML element to the `div` with `id="root"` and say `Hello world` in it. To do so, we use `ReactDOM.render`:
+
+```js
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
+```
+
+That's it, when downloaded on the browser (aka client side) this JavaScript code will add an `Hello World` to the HTML page. You can test it on [Codepen](https://reactjs.org/redirect-to-codepen/hello-world).
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Page title, this appears in the browser tab</title>
+
+    // React script, adds its top level API
+    <script src="https://unpkg.com/react@^17/umd/react.production.min.js"></script>
+    // ReactDOM script, adds functions to interact with the DOM (Document Object Model) 
+    <script src="https://unpkg.com/react-dom@17.0.1/umd/react-dom.production.min.js"></script>
+    // Babel script, enables using ES6+ JavaScript in old browsers like the evil IE11
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  </head>
+
+  <body>
+    <div id="root">
+      // After client's browser executes the JavaScript in this page
+      // Here there will be
+      // <h1>Hello, world!</h1>
+    </div>
+
+    <script type="text/babel">
+      ReactDOM.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('root')
+      );
+    </script>
+  </body>
+</html>
+```
+
+If I copy the `<h1>Hello, world!</h1>` into a variable `helloElement`, I can call `ReactDOM.render` passing `helloElement`. This hybrid HTML/string syntax is introduced by React and it's called `JSX`.
+
+```jsx
+const helloElement = <h1>Hello, world!</h1>
+ReactDOM.render(
+  helloElement,
+  document.getElementById('root')
+);
+```
+
+To add dynamic content such as the current time, I can pass a function to `ReactDOM.render`
+
+```js
+const Timer = () => {
+  return <h1>{`It's ${(new Date()).toISOString()}`}</h1>
+}
+
+ReactDOM.render(
+  <Timer/>,
+  document.getElementById('root')
+);
+```
+
+`Timer` is a function returning an HTML element, and it is called `Component` in React. A component can use other components, like tomato sauce and mozzarella can be combined together and used as pizza topping.
+
+![Photo of a pizza napoletana][pizza]
+*Photo by [Aurélien Lemasson-Théobald](https://unsplash.com/@aurel__lens) on Unsplash*
+
 ## Markdown
 
-Markdown is another language I am familiar with as I use it to document code within its repository as it is supported and formatted by Github, Gitlab and Bitbucket. It takes a bit of time to get to know the [syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is made of ~10 elements, tiny but powerfull.
+Markdown is a language I am familiar with as I use it to document code within its repository as it is supported and formatted by Github, Gitlab and Bitbucket. It takes a bit of time to get to know [the syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is made of ~10 elements, tiny but powerfull. I don't know all of them by heart, I use this cheatsheet quite a lot.
 
-When I write posts I generally need paragraphs, [titles](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers), [images](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images), [code blocks](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code-and-syntax-highlighting) and sometimes [lists](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists). Most of the time I would go and check the cheatsheet, no need to know them by heart.
+When I write posts I generally need paragraphs, [titles](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers), [images](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images), [code blocks](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code-and-syntax-highlighting) and sometimes [lists](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists).
 
-VSCode supports Markdown preview, and I recommend adding [Markdown lint extension](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint).
+VSCode supports Markdown preview, I recommend adding [Markdown lint extension](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) to spot errors while writing it.
+
+[React Markdown](https://github.com/remarkjs/react-markdown) is a JavaScript library that adds a React component that renders Markdown content (test it on [CodeSandbox](https://codesandbox.io/embed/musing-jepsen-usn1d?fontsize=14&hidenavigation=1&theme=dark)):
+
+```js
+  const markdown = '**bold** and _italic_'
+
+  <ReactMarkdown>{markdown}</ReactMarkdown>
+```
 
 ## Next.js
 
 Next.js is a framework to build React applications. It has a zero-configuration compilation and bundling setup that makes it handy to start with. I chose it because it was used in the tutorial I used, but I dug into it to understand how it works.
 
-It requires a folder named `pages` that will contain the list of pages of the website as React components. The first super power of Next.js is that it supports file-system routing, meaning that requests to `yourwebsite.com` will load the default `index.js`, and requests to `yourwebsite.com/about` will route to `about.js`. Cool, isn't it?
+It requires a folder named `pages` that will contain the list of pages of the website as React components.
+
+The first super power of Next.js is that it supports file-system routing, meaning that requests to `yourwebsite.com` will load the default `index.js` and requests to `yourwebsite.com/about` will route to `about.js`. Cool, isn't it?
 
 Being pure React components, pages can use other components to create more or less complex structures.
 
-You can argue that a blog is made of pages dynamically created based on a list of posts, that in my case are a list of `md` files. Second power, Next.js supports **server-side** dynamic pages creation: at build time it creates one page component for each Markdown file from a specific folder, using `[postname].jsx` as a schema.
+Posts are created at build time, on the server, using a special page named `[postname].jsx`. They will be available at `yourwebsite.com/post/[name-of-my-awesome-post]`. Remember file-system routing? `[postname].jsx` is in `pages/post` folder!
 
 ![This project's posts folder containing 2 files, index.js and about.js, plus a post folder][pages_folder]
-
 *This project has 2 pages (`index.js` and `about.js`) and, post folder*
 
-It took me some time to understand what **server-side** vs **static** vs **client-side* rendering meant and how Next.js works under the hood. [Rendering on the web](https://developers.google.com/web/updates/2019/02/rendering-on-the-web) from Google developers blog explains in details all different renderings.
+This is the second power of Next.js: it supports **server-side** dynamic pages creation: at build time it scans your project for Markdown files and creates a page for each one, using `[postname].jsx` as a schema.
 
-In my pages I use [getStaticProps](https://github.com/pducolin/blog/blob/main/pages/post/%5Bpostname%5D.jsx#L80) and [getStaticPaths](https://github.com/pducolin/blog/blob/main/pages/post/%5Bpostname%5D.jsx#L96) to get dynamic informations, such as the list of post names. These two functions are called by Next at **build time** and used to pre-render Javascript pages using the props returned.
+### server-side vs client-side rendering
+
+It took me some time to understand what **server-side** vs **client-side** rendering meant and how Next.js works under the hood. [Rendering on the web by Jason Miller and Addy Osmani](https://developers.google.com/web/updates/2019/02/rendering-on-the-web) is a great resource to learn more.
+
+Considering the pizza 🍕 analogy, I consider rendering as the cooking of a pizza:
+
+- on server-side the pizza is delivered fully baked, you can eat it right away
+- on client-side you get the pizza base, the toppings and the recipe (the script) to follow to put them together and bake it on your oven (aka on your browser)
+
+Having the page delivered as static content reduces the time to ~~eat~~ load it on the browser, and makes it easier to index it on search engines. Next.js helps creating static pages using a dynamic informations such as the post list and their content.
+
+### server-side rendering in Next.js
+
+In my post schema page I use [getStaticProps](https://github.com/pducolin/blog/blob/main/pages/post/%5Bpostname%5D.jsx#L80) and [getStaticPaths](https://github.com/pducolin/blog/blob/main/pages/post/%5Bpostname%5D.jsx#L96) to get dynamic informations, such as the list of post names. These two functions are called by Next at **build time** and used to pre-render Javascript pages using the props returned.
 
 By running `next build && next export` the magic happens, and next generates the HTML static pages:
 
@@ -111,5 +244,12 @@ will generate one page per markdown file 🎉
 
 Next post will be about the design, from picking colors to TailwindCss and @tailwindcss/typography. Stay tuned!
 
+## Resources
+
+- [Getting started with React ny Tania Rascia](https://www.taniarascia.com/getting-started-with-react/)
+- [Building a markdown blog with Next 9.4 and Netlify by Cassidy Williams](https://www.netlify.com/blog/2020/05/04/building-a-markdown-blog-with-next-9.4-and-netlify/)
+- [Rendering on the web by Jason Miller and Addy Osmani](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
+
 [pages_folder]: https://raw.githubusercontent.com/pducolin/blog/main/public/assets/images/nextjs_pages.webp "This project has 2 pages (`index.js` and `about.js`)"
-[out_folder]: https://raw.githubusercontent.com/pducolin/blog/main/public/assets/images/build_and_export.webp "This project out folder"
+[out_folder]: https://raw.githubusercontent.com/pducolin/blog/main/public/assets/images/build_and_export.webp "This project out folder contains all the pages created at build time"
+[pizza]: https://raw.githubusercontent.com/pducolin/blog/main/public/assets/images/pizza.webp "React components are like ingredients in a recipe"
