@@ -24,7 +24,6 @@ export const Layout = ({ children, pageTitle, currentURL, description, previewIm
             <meta property="og:description" content={description} key="ogdesc" />
             <meta property="og:type" content={isPost ? "article" : "website"} key="ogtype" />
             <title>{pageTitle}</title>
-            {process.env.NODE_ENV === "production" && <Analytics />}
           </Head>
           <section className="flex-grow h-full">
             <Header />
