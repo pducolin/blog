@@ -2,6 +2,7 @@ import "tailwindcss/tailwind.css"
 
 import { Layout } from "@components/Layout"
 import dynamic from "next/dynamic"
+import { evaluateReadingTime } from "@lib/readingTime"
 import matter from "gray-matter"
 
 const DynamicPostList = dynamic(() => import("../components/PostList").then((mod) => mod.PostList))
@@ -43,9 +44,14 @@ export async function getStaticProps() {
       const slug = key.replace(/^.*[\\/]/, "").slice(0, -3)
       const value = values[index]
       const document = matter(value.default)
+
+      const timeToRead = evaluateReadingTime(document.content)
+      console.log("passing time to read " + timeToRead)
+
       return {
         frontmatter: document.data,
-        slug
+        slug,
+        timeToRead
       }
     })
     return data

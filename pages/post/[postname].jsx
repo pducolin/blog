@@ -6,6 +6,7 @@ import { Layout } from "@components/Layout"
 import Link from "next/link"
 import ReactMarkdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import { evaluateReadingTime } from "@lib/readingTime"
 import matter from "gray-matter"
 import moment from "moment"
 import { useRouter } from "next/router"
@@ -51,8 +52,11 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
           </h1>
           <div className="items-center text-frontSecondary flex flex-row justify-start gap-1">
             <IconCalendar size={14} className="fill-current text-frontSecondary" />
-            <h2 className="italic text-sm text-frontSecondary">
+            <h2 className="italic text-sm text-frontSecondary mr-1">
               {moment(frontmatter.date).format("MMMM D, YYYY")}
+            </h2>
+            <h2 className="italic text-sm text-frontSecondary">
+              ・ {evaluateReadingTime(markdownBody)} min read
             </h2>
           </div>
         </div>

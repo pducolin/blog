@@ -3,7 +3,7 @@ import Link from "next/link"
 import React from "react"
 import moment from "moment"
 
-export const PostCard = ({ slug, frontmatter }) => (
+export const PostCard = ({ slug, frontmatter, timeToRead }) => (
   <li key={slug} className="box-border w-1/2">
     <Link href={{ pathname: `/post/${slug}` }}>
       <a className="w-full group outline-none">
@@ -29,10 +29,13 @@ export const PostCard = ({ slug, frontmatter }) => (
                   size={14}
                   className="fill-current text-frontSecondary mr-1"
                 />
-                <span className="font-mono text-xs text-frontSecondary leading-tight ">
+                <span className="font-mono text-xs text-frontSecondary leading-tight mr-2">
                   {moment(frontmatter.date).year() === moment().year()
                     ? moment(frontmatter.date).format("MMM D")
                     : moment(frontmatter.date).format("MMM D, YYYY")}
+                </span>
+                <span className="font-mono text-xs text-frontSecondary leading-tight ">
+                  ・ {timeToRead} min read
                 </span>
               </div>
             </div>
