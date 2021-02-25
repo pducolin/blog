@@ -1,5 +1,5 @@
 ---
-title: "Making of a blog: style me up"
+title: "Making of a blog: Tailwind me up"
 author: "poladuco"
 date: "2021-02-24"
 heroImage: 
@@ -119,7 +119,7 @@ It comes with a preset of spacing, margins, colors and fonts that you can custom
 Keeping the example of a blue text block:
 
 ```html
-<div class='text-md text-blue-600 italic'>Hello, world!</div>
+<div class='italic text-blue-600 text-md'>Hello, world!</div>
 ```
 
 You can play with it it on [this codepen](https://codepen.io/poladuco/pen/bGBaRqz)
