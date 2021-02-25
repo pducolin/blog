@@ -1,5 +1,5 @@
 ---
-title: "Making of a blog: Markdown ❤️ Next"
+title: "Making of a blog: Next ❤️ Markdown"
 author: "poladuco"
 date: "2021-02-16"
 heroImage: 
