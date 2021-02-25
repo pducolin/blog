@@ -22,7 +22,7 @@ const About = ({ title, description, previewImage }) => {
         <br />
         <p>
           I am a co-organizer at Ladies of Code Paris and QueerJS, wishing to have more and more
-          folks from under represented groups joining and staying in tech.
+          folks from underrepresented groups joining and staying in tech.
         </p>
         <br />
         <p>
