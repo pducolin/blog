@@ -1,13 +1,12 @@
 import { useEffect } from "react"
-import { useWindowSize } from "@hooks/useWindowSize"
 
 const MICROANALYTICS_URL = "https://microanalytics.io/api/event"
 const MICROANALYTICS_CONTENT_TYPE = "application/json, text/javascript; charset=utf-8"
 
-const postAnalytics = async ({ page, windowsResolution }) => {
+const postAnalytics = async ({ page }) => {
   let resolution = undefined
-  if (windowsResolution && windowsResolution.width && windowsResolution.height) {
-    resolution = `${windowsResolution.width}x${windowsResolution.height}`
+  if (window && window.width && window.height) {
+    resolution = `${window.width}x${window.height}`
   }
   await fetch(MICROANALYTICS_URL, {
     method: "POST",
@@ -22,16 +21,14 @@ const postAnalytics = async ({ page, windowsResolution }) => {
 }
 
 export const Analytics = ({ page }) => {
-  const windowsResolution = useWindowSize()
-
   useEffect(() => {
     // only execute on client side
     if (typeof window === "undefined") {
       return
     }
 
-    postAnalytics({ page, windowsResolution })
-  }, [page, windowsResolution])
+    postAnalytics({ page })
+  }, [page])
 
   return <></>
 }

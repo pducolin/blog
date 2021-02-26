@@ -4,7 +4,7 @@ import { Analytics } from "@components/Analytics"
 import Head from "next/head"
 import { Header } from "@components/Header"
 
-const TEST_ANALYTICS = false
+const ANALYTICS_ENABLED = process.env.NODE_ENV === "production"
 
 export const Layout = ({ children, pageTitle, currentURL, description, previewImage, isPost }) => {
   return (
@@ -29,9 +29,7 @@ export const Layout = ({ children, pageTitle, currentURL, description, previewIm
           </Head>
 
           {/* Analytics */}
-          {(process.env.NODE_ENV === "production" || TEST_ANALYTICS) && (
-            <Analytics page={currentURL} />
-          )}
+          {ANALYTICS_ENABLED && <Analytics page={currentURL} />}
 
           <section className="flex-grow h-full">
             <Header />
