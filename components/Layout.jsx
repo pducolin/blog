@@ -4,6 +4,8 @@ import { Analytics } from "@components/Analytics"
 import Head from "next/head"
 import { Header } from "@components/Header"
 
+const TEST_ANALYTICS = false
+
 export const Layout = ({ children, pageTitle, currentURL, description, previewImage, isPost }) => {
   return (
     <>
@@ -25,6 +27,12 @@ export const Layout = ({ children, pageTitle, currentURL, description, previewIm
             <meta property="og:type" content={isPost ? "article" : "website"} key="ogtype" />
             <title>{pageTitle}</title>
           </Head>
+
+          {/* Analytics */}
+          {(process.env.NODE_ENV === "production" || TEST_ANALYTICS) && (
+            <Analytics page={currentURL} />
+          )}
+
           <section className="flex-grow h-full">
             <Header />
             <div>{children}</div>
