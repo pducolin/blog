@@ -21,7 +21,6 @@ const renderers = {
 
 export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdownBody }) {
   const router = useRouter()
-  const { pid } = router.query
   if (!frontmatter) return <></>
 
   return (
@@ -29,7 +28,7 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
       pageTitle={`${siteTitle} | ${frontmatter.title}`}
       description={frontmatter.description}
       previewImage={frontmatter.heroImage.path.big}
-      currentURL={`https://poladuco.com/${pid}`}
+      currentURL={`https://poladuco.com${router.asPath}`}
       twitterHandle="PolaDuco"
       isPost
     >
