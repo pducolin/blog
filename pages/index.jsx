@@ -46,8 +46,6 @@ export async function getStaticProps() {
       const document = matter(value.default)
 
       const timeToRead = evaluateReadingTime(document.content)
-      console.log("passing time to read " + timeToRead)
-
       return {
         frontmatter: document.data,
         slug,
