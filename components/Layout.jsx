@@ -1,6 +1,5 @@
 import { IconLove, IconNextJS, IconReact, IconTailwindCss } from "@components/Icons"
 
-import { Analytics } from "@components/Analytics"
 import Head from "next/head"
 import { Header } from "@components/Header"
 
@@ -25,11 +24,17 @@ export const Layout = ({ children, pageTitle, currentURL, description, previewIm
             <meta property="og:title" content={pageTitle} key="ogtitle" />
             <meta property="og:description" content={description} key="ogdesc" />
             <meta property="og:type" content={isPost ? "article" : "website"} key="ogtype" />
+
+            {ANALYTICS_ENABLED && (
+              <script
+                src="https://raw.githubusercontent.com/pducolin/blog/main/scripts/analytics.js"
+                async
+                defer
+              />
+            )}
+
             <title>{pageTitle}</title>
           </Head>
-
-          {/* Analytics */}
-          {ANALYTICS_ENABLED && <Analytics page={currentURL} />}
 
           <section className="flex-grow h-full">
             <Header />
