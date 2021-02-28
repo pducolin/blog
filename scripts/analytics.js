@@ -16,6 +16,7 @@ const postAnalytics = async () => {
       screen_resolution: resolution
     })
   })
+  return
 }
 
 // respect user's Do Not Track setting
@@ -24,3 +25,5 @@ if (navigator?.doNotTrack) {
 }
 
 postAnalytics()
+
+return
