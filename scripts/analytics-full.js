@@ -3,7 +3,7 @@ const MICROANALYTICS_CONTENT_TYPE = "application/json, text/javascript; charset=
 
 async function postAnalytics() {
   // respect user's Do Not Track setting
-  if (navigator?.doNotTrack) {
+  if (navigator && navigator.doNotTrack) {
     return
   }
 

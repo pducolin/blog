@@ -45,7 +45,8 @@
     "husky": "^5.0.9",
     "lint-staged": "^10.5.4",
     "mediumexporter": "^0.1.6",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "uglify-js": "^3.12.8"
   },
   "husky": {
     "hooks": {
