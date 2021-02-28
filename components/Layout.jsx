@@ -27,7 +27,10 @@ export const Layout = ({ children, pageTitle, currentURL, description, previewIm
 
             {ANALYTICS_ENABLED && (
               <script
-                src="https://cdn.jsdelivr.net/gh/pducolin/blog@main/scripts/analytics-min.js"
+                data-host="https://microanalytics.io"
+                data-dnt="false"
+                src="https://microanalytics.io/js/script.js"
+                id="ZwSg9rf6GA"
                 async
                 defer
               />
