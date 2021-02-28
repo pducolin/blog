@@ -43,11 +43,11 @@ export async function getStaticProps() {
     const data = keys.map((key, index) => {
       const slug = key.replace(/^.*[\\/]/, "").slice(0, -3)
       const value = values[index]
-      const document = matter(value.default)
+      const { content, data: frontmatter } = matter(value.default)
 
-      const timeToRead = evaluateReadingTime(document.content)
+      const timeToRead = evaluateReadingTime(content)
       return {
-        frontmatter: document.data,
+        frontmatter,
         slug,
         timeToRead
       }
