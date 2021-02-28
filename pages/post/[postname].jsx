@@ -1,5 +1,7 @@
 import "tailwindcss/tailwind.css"
 
+import { format, parse } from "date-fns"
+
 // import { IconBack } from "@components/Icons"
 import { IconCalendar } from "@components/Icons"
 import { Layout } from "@components/Layout"
@@ -8,7 +10,6 @@ import ReactMarkdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { evaluateReadingTime } from "@lib/readingTime"
 import matter from "gray-matter"
-import moment from "moment"
 import { useRouter } from "next/router"
 
 const CodeRenderer = ({ language, value }) => (
@@ -52,7 +53,7 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
           <div className="items-center text-frontSecondary flex flex-row justify-start gap-1">
             <IconCalendar size={14} className="fill-current text-frontSecondary" />
             <h2 className="italic text-sm text-frontSecondary mr-1">
-              {moment(frontmatter.date).format("MMMM D, YYYY")}
+              {format(parse(frontmatter.date, "yyyy-MM-dd", new Date()), "MMMM d, yyyy")}
             </h2>
             <h2 className="italic text-sm text-frontSecondary">
               ・ {evaluateReadingTime(markdownBody)} min read
@@ -72,7 +73,10 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
             <Link href={frontmatter.original.link}>
               <a className="underline">{frontmatter.original.linkTitle}</a>
             </Link>
-            <h2 className="">on {moment(frontmatter.original.date).format("MMMM D, YYYY")}</h2>
+            <h2 className="">
+              on{" "}
+              {format(parse(frontmatter.original.date, "yyyy-MM-dd", new Date()), "MMMM d, yyyy")}
+            </h2>
           </div>
         )}
       </article>
