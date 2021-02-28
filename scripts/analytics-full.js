@@ -1,7 +1,7 @@
 const MICROANALYTICS_URL = "https://microanalytics.io/api/event"
 const MICROANALYTICS_CONTENT_TYPE = "application/json, text/javascript; charset=utf-8"
 
-const postAnalytics = async () => {
+async function postAnalytics() {
   // respect user's Do Not Track setting
   if (navigator?.doNotTrack) {
     return
