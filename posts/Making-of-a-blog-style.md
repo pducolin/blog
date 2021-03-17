@@ -73,7 +73,7 @@ Let's get started!
 1. I added Tailwind to my Next project by running:
 
     ```bash
-    yarn add --dev tailwindcss@latest postcss@latest autoprefixer@latest
+    yarn add --dev tailwindcss@latest postcss@latest autoprefixer@latest @tailwindcss/typography
     ```
   
 2. I created my tailwind config file by running:
@@ -95,7 +95,10 @@ Let's get started!
         variants: {
           extend: {},
         },
-        plugins: [],
+        plugins: [
+          require('@tailwindcss/typography'),
+          // ...
+        ],
       }
     ```
 
@@ -158,7 +161,7 @@ Let's try it and let me know how you like it, if you find any obstacle. Reach ou
 
 - 📃 [TailwindCss](https://tailwindcss.com/)
 
-- 📃 [@tailwindcss/typography](@tailwindcss/typography)
+- 📃 [@tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)
 
 - 🎨 [Coolors.co](https://coolors.co/)
 
