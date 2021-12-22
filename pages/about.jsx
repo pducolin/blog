@@ -15,7 +15,7 @@ const About = ({ title, description, previewImage }) => {
       <h2 className="font-mono italic text-center text-md text-frontSecondary">{description}</h2>
       <main className="mx-4 my-8 font-mono">
         <p>
-          I am an Italian software developper leaving in Paris. I love learning new technologies,
+          I am an Italian software developper living in Paris. I love learning new technologies,
           trying different languages and crafting software that reduces friction for both users and
           developers.
         </p>
