@@ -26,14 +26,7 @@ export const Layout = ({ children, pageTitle, currentURL, description, previewIm
             <meta property="og:type" content={isPost ? "article" : "website"} key="ogtype" />
 
             {ANALYTICS_ENABLED && (
-              <script
-                data-host="https://microanalytics.io"
-                data-dnt="false"
-                src="https://microanalytics.io/js/script.js"
-                id="ZwSg9rf6GA"
-                async
-                defer
-              />
+              <script data-goatcounter="https://poladuco.goatcounter.com/count" async src="//gc.zgo.at/count.js"/>
             )}
 
             <title>{pageTitle}</title>
