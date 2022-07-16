@@ -2,8 +2,7 @@ import "tailwindcss/tailwind.css"
 
 import { Layout } from "@components/Layout"
 import dynamic from "next/dynamic"
-import { evaluateReadingTime } from "@lib/readingTime"
-import matter from "gray-matter"
+import { getSortedPostsData } from '@lib/posts';
 
 const DynamicPostList = dynamic(() => import("../components/PostList").then((mod) => mod.PostList))
 
@@ -17,7 +16,7 @@ const Index = ({ posts, title, description, previewImage }) => {
       previewImage={previewImage}
     >
       <h1 className="my-4 font-mono text-4xl font-medium text-center">poladuco.com</h1>
-      <h2 className="font-mono italic text-center text-md text-frontSecondary my-4">
+      <h2 className="my-4 font-mono italic text-center text-md text-frontSecondary">
         {description}
       </h2>
       <main>
@@ -36,25 +35,7 @@ export default Index
 export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`)
 
-  const posts = ((context) => {
-    const keys = context.keys()
-    const values = keys.map(context)
-
-    const data = keys.map((key, index) => {
-      const slug = key.replace(/^.*[\\/]/, "").slice(0, -3)
-      const value = values[index]
-      const { content, data: frontmatter } = matter(value.default)
-
-      const timeToRead = evaluateReadingTime(content)
-      return {
-        frontmatter,
-        slug,
-        timeToRead
-      }
-    })
-    return data
-    // eslint-disable-next-line no-undef
-  })(require.context("../posts", true, /\.md$/))
+  const posts = getSortedPostsData();
 
   return {
     props: {
