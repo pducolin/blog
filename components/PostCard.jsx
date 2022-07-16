@@ -4,7 +4,7 @@ import { IconCalendar } from "@components/Icons"
 import Link from "next/link"
 import React from "react"
 
-export const PostCard = ({ slug, frontmatter, timeToRead }) => {
+export const PostCard = ({ id, frontmatter, timeToRead }) => {
   const publishDate = parse(frontmatter.date, "yyyy-MM-dd", new Date())
   let formattedPublishDate = format(publishDate, "MMM d, yyyy")
   if (isSameYear(new Date(), publishDate)) {
@@ -12,35 +12,35 @@ export const PostCard = ({ slug, frontmatter, timeToRead }) => {
   }
 
   return (
-    <li key={slug} className="box-border w-1/2">
-      <Link href={{ pathname: `/post/${slug}` }}>
-        <a className="w-full group outline-none">
+    <li key={id} className="box-border w-1/2">
+      <Link href={{ pathname: `/post/${id}` }}>
+        <a className="w-full outline-none group">
           <div className="w-full p-2 border-box h-52">
-            <div className="flex flex-col w-full h-full border-2 border-frontPrimary border-opacity-0 group-focus:border-opacity-100 box-border">
+            <div className="box-border flex flex-col w-full h-full border-2 border-opacity-0 border-frontPrimary group-focus:border-opacity-100">
               <img
-                className="object-cover w-full transition-all object-center duration-500 ease-in-out h-2/3 group-hover:opacity-20 group-focus:opacity-20 flex-none group-hover:h-1/3 group-focus:h-1/3"
+                className="flex-none object-cover object-center w-full transition-all duration-500 ease-in-out h-2/3 group-hover:opacity-20 group-focus:opacity-20 group-hover:h-1/3 group-focus:h-1/3"
                 src={frontmatter.heroImage.path.small}
                 alt={frontmatter.title}
                 width="600px"
                 height="400px"
               />
-              <div className="flex flex-col justify-between w-full h-1/3 group-hover:h-2/3 group-focus:h-2/3 px-3 py-2 flex-grow transition-all duration-500 ease-in-out bg-backgroundSecondary group-hover:bg-secondary group-focus:bg-secondary">
+              <div className="flex flex-col justify-between flex-grow w-full px-3 py-2 transition-all duration-500 ease-in-out h-1/3 group-hover:h-2/3 group-focus:h-2/3 bg-backgroundSecondary group-hover:bg-secondary group-focus:bg-secondary">
                 <span
-                  className="font-mono text-md leading-tight transition-all duration-500 ease-in-out overflow-ellipsis overflow-hidden whitespace-nowrap group-hover:whitespace-normal group-focus:whitespace-normal"
+                  className="overflow-hidden font-mono leading-tight transition-all duration-500 ease-in-out text-md overflow-ellipsis whitespace-nowrap group-hover:whitespace-normal group-focus:whitespace-normal"
                   title={frontmatter.title}
                 >
                   {frontmatter.title}
                 </span>
-                <div className="align-middle text-frontSecondary flex flex-row flex-none">
+                <div className="flex flex-row flex-none align-middle text-frontSecondary">
                   <IconCalendar
-                    id={`calendarIcon_${slug}`}
+                    id={`calendarIcon_${id}`}
                     size={14}
-                    className="fill-current text-frontSecondary mr-1"
+                    className="mr-1 fill-current text-frontSecondary"
                   />
-                  <span className="font-mono text-xs text-frontSecondary leading-tight mr-2">
+                  <span className="mr-2 font-mono text-xs leading-tight text-frontSecondary">
                     {formattedPublishDate}
                   </span>
-                  <span className="font-mono text-xs text-frontSecondary leading-tight ">
+                  <span className="font-mono text-xs leading-tight text-frontSecondary ">
                     ・ {timeToRead} min read
                   </span>
                 </div>

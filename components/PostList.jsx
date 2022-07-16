@@ -9,8 +9,8 @@ export const PostList = ({ posts }) => {
       {!posts && <div>No posts!</div>}
       <ul className="flex flex-row flex-wrap w-full">
         {posts &&
-          posts.map(({id, ...post}) => {
-            return <PostCard key={id} {...post} />
+          posts.map((post) => {
+            return <PostCard key={post.id} {...post} />
           })}
       </ul>
     </div>
