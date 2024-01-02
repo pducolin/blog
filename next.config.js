@@ -1,4 +1,5 @@
 module.exports = {
+  output: "export",
   webpack(config) {
     config.module.rules.push({
       test: /\.md$/,
@@ -7,6 +8,7 @@ module.exports = {
     return config
   },
   images: {
-    domains: ["github.com"]
+    domains: ["github.com"],
+    unoptimized: true
   }
 }
