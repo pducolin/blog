@@ -71,8 +71,8 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
           <div className="items-center text-frontSecondary flex flex-row justify-center mt-4 text-sm text-frontSecondarymr-1 italic gap-1">
             {/* <IconCalendar size={14} className="fill-current text-frontSecondary mr-1" /> */}
             <h2 className="">Originally published at</h2>
-            <Link href={frontmatter.original.link}>
-              <a className="underline">{frontmatter.original.linkTitle}</a>
+            <Link href={frontmatter.original.link} className="underline">
+              {frontmatter.original.linkTitle}
             </Link>
             <h2 className="">
               on{" "}
@@ -82,7 +82,7 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
         )}
       </article>
     </Layout>
-  )
+  );
 }
 
 export async function getStaticProps({ ...ctx }) {
