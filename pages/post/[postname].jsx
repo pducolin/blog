@@ -4,6 +4,7 @@ import { format, parse } from "date-fns"
 
 // import { IconBack } from "@components/Icons"
 import { IconCalendar } from "@components/Icons"
+import Image from "next/image"
 import { Layout } from "@components/Layout"
 import Link from "next/link"
 import ReactMarkdown from "react-markdown"
@@ -34,7 +35,7 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
       isPost
     >
       <div className="w-full h-52 relative">
-        <img
+        <Image
           src={frontmatter.heroImage.path.big}
           className="h-full object-cover w-full object-center shadow-sm absolute"
           alt={frontmatter.heroImage.alt}

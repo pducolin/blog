@@ -1,5 +1,6 @@
 import { IconGithub, IconTwitter } from "@components/Icons"
 
+import Image from "next/image"
 import Link from "next/link"
 
 export const Header = () => {
@@ -8,7 +9,7 @@ export const Header = () => {
       <nav className="flex items-center justify-between w-full h-full font-mono">
         <Link href="/">
           <a className="box-border h-full transition duration-500 ease-in-out border-2 rounded-full outline-none border-primary hover:opacity-70 focus:opacity-70 focus:outline-none hover:border-frontPrimary focus:border-frontPrimary">
-            <img
+            <Image
               title="home"
               className="h-full rounded-full object-cover"
               alt="poladuco"

@@ -1,6 +1,7 @@
 import { format, isSameYear, parse } from "date-fns"
 
 import { IconCalendar } from "@components/Icons"
+import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 
@@ -17,7 +18,7 @@ export const PostCard = ({ id, frontmatter, timeToRead }) => {
         <a className="w-full outline-none group">
           <div className="w-full p-2 border-box h-52">
             <div className="box-border flex flex-col w-full h-full border-2 border-opacity-0 border-frontPrimary group-focus:border-opacity-100">
-              <img
+              <Image
                 className="flex-none object-cover object-center w-full transition-all duration-500 ease-in-out h-2/3 group-hover:opacity-20 group-focus:opacity-20 group-hover:h-1/3 group-focus:h-1/3"
                 src={frontmatter.heroImage.path.small}
                 alt={frontmatter.title}
