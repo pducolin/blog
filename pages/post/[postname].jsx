@@ -39,6 +39,7 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
           src={frontmatter.heroImage.path.big}
           className="h-full object-cover w-full object-center shadow-sm absolute"
           alt={frontmatter.heroImage.alt}
+          fill
         />
         <div className="absolute bottom-0 left-0 w-2/3 bg-secondary justify-center flex flex-col pl-4 gap-1 py-2 mb-2">
           <h1

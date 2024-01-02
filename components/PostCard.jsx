@@ -22,8 +22,8 @@ export const PostCard = ({ id, frontmatter, timeToRead }) => {
               className="flex-none object-cover object-center w-full transition-all duration-500 ease-in-out h-2/3 group-hover:opacity-20 group-focus:opacity-20 group-hover:h-1/3 group-focus:h-1/3"
               src={frontmatter.heroImage.path.small}
               alt={frontmatter.title}
-              width="600px"
-              height="400px"
+              width={600}
+              height={400}
             />
             <div className="flex flex-col justify-between flex-grow w-full px-3 py-2 transition-all duration-500 ease-in-out h-1/3 group-hover:h-2/3 group-focus:h-2/3 bg-backgroundSecondary group-hover:bg-secondary group-focus:bg-secondary">
               <span

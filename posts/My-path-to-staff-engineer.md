@@ -44,7 +44,7 @@ My second project proposal was to build a testing framework to allow testing the
 
 The Agent QA is a manual process, done for one or more weeks while the code base is frozen, every 6 weeks. I suggested building something that could let developers define their infrastructure setup somehow, then allow spawning an ephemeral environment, configuring the Agent and assert that the Agent was emitting expected outputs, such as metrics, logs and events.
 
-![Photo of a black-box test environment for Datadog Agent]( https://raw.githubusercontent.com/pducolin/blog/main/public/assets/images/black_box.webp)
+![Photo of a black-box test environment for Datadog Agent](/assets/images/black_box.webp)
 
 ## Step three: the execution
 
@@ -72,14 +72,24 @@ That was a tough moment: my energy level was low, the hardest part feeling my ca
 
 ## Conclusions
 
-There are many things I learned during this 3 years.
+There are many things I learned during this 3 years. Here is my top 5:
 
-Number one: talk to people and build a trust network. The greatest misconception I had over the staff role is that you could achieve it by working on a complex technical project individually. Turns out there it depends, find out what matters for your company. In my case IC stands for Influential Contributor rather than Individual Contributor.
+### Talk to people and build a trust network
 
-Number two: communicate honestly with your manager, help them help yourself. Deliver what you are asked for and discuss what you want to work on next, not hesitating to move out of your comfort zone.
+The greatest misconception I had over the staff role is that you could achieve it by working on a complex technical project individually. Turns out there it depends, find out what matters for your company. In my case IC stands for Influential Contributor rather than Individual Contributor.
 
-Number three: find a project that has a business impact. Then show it and think about how to measure it, from the start.
+### Communicate honestly with your manager
 
-Number four: reduce boilerplate to increase adoption. We implemented a new framework, we chose to use the most used language, Golang, rather than the one that everyone knew, Python. Write documentation, guidelines and examples. Communication was a key factor in delivering and allowing the project's adoption.
+Help your manager help yourself. Speak up if you want to lead a project. Define goals with them and deliver what you are asked for, then discuss what you want to work on next, do not hesitate to move out of your comfort zone.
 
-Number five: iterate and prioritize decisions that will help most of the use cases. If we had waited for the perfect and complete solution, we would still be here discussing. It's never too soon to test a version and to communicate about it. Prefer beta tester you trust and that trust you, it helps with giving and receiving candid feedback.
+### Find a project that has a business impact
+
+Then show it and think about how to measure it during the project implementation, from the start. We initially  used the number of ephemeral EC2 instances created using our framework, per team and per developer.
+
+### Reduce boilerplate to increase adoption
+
+We implemented a new framework, we chose to use the most used language, Golang, rather than the one that everyone knew, Python. Write documentation, guidelines and examples. Communication was a key factor in delivering and allowing the project's adoption.
+
+### Iterate and prioritize decisions that will help most of the use cases
+
+If we had waited for the perfect and complete solution, we would still be here discussing it. It's never too soon to test a version and to communicate about it. Prefer beta tester you trust and that trust you, it helps with sharing candid feedback.

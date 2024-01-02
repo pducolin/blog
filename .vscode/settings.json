@@ -1,6 +1,10 @@
 {
   "editor.formatOnSave": true,
   "colorize.languages": ["javascript", "json"],
-  // Specify file types to spell check.
-  "cSpell.enabledLanguageIds": ["markdown"]
+  "cSpell.enabledLanguageIds": [
+    "markdown"
+  ],
+  "cSpell.words": [
+    "discoverability"
+  ]
 }

@@ -15,8 +15,8 @@ export const Header = () => {
             title="home"
             className="h-full rounded-full object-cover"
             alt="poladuco"
-            height="36px"
-            width="36px"
+            height={36}
+            width={36}
             src="https://github.com/pducolin.png"
           />
 
