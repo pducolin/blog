@@ -1,16 +1,17 @@
-require("colors")
-const fs = require("fs")
+import "colors"
+
+import { createInterface } from "readline"
+import { fileURLToPath } from "url"
+import path from "path"
+import { writeFileSync } from "fs"
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const log = console.log
 
-const readline = require("readline")
-
-const COLORS = {
-  red: "ESC[31m"
-}
-
 const askQuestion = async (question) => {
-  const rl = readline.createInterface({
+  const rl = createInterface({
     input: process.stdin,
     output: process.stdout
   })
@@ -62,8 +63,8 @@ Apple pie jelly candy. Tiramisu fruitcake jelly beans lollipop. Gummies bonbon p
     // * [^a-z0-9\-] "any  charachter tha is not a letter, not a number, not -
     // * i "ignore upper/lower case differences"
     // * g "global, match every instance"
-    .replace(/[^a-z0-9\-]/gi, "")
-  fs.writeFileSync(__dirname + `/../posts/${filename}.md`, header)
+    .replace(/[^a-z0-9-]/gi, "")
+  writeFileSync(__dirname + `/../posts/${filename}.md`, header)
   console.log(`Done, go to ${filename} and start writing`.green)
 }
 
