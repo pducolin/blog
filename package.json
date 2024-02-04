@@ -50,7 +50,8 @@
     "lint-staged": "^10.5.4",
     "mediumexporter": "^0.1.6",
     "prettier": "^1.16.4",
-    "webpack": "^5.89.0"
+    "webpack": "^5.89.0",
+    "xml-formatter": "^3.6.2"
   },
   "husky": {
     "hooks": {
