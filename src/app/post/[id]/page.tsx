@@ -1,17 +1,14 @@
 import "tailwindcss/tailwind.css"
 
 import { format, parse } from "date-fns"
+import { getPostData, getSortedPostsData } from "lib/posts"
 
 // import { IconBack } from "@components/Icons"
-import { IconCalendar } from "@components/Icons"
+import { IconCalendar } from "app/components/Icons"
 import Image from "next/image"
-import { Layout } from "@components/Layout"
 import Link from "next/link"
 import ReactMarkdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-import { evaluateReadingTime } from "@lib/readingTime"
-import matter from "gray-matter"
-import { useRouter } from "next/router"
 
 const CodeRenderer = ({ language, value }) => (
   <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>
@@ -21,19 +18,17 @@ const renderers = {
   code: CodeRenderer
 }
 
-export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdownBody }) {
-  const router = useRouter()
-  if (!frontmatter) return <></>
+export function generateStaticParams() {
+  return getSortedPostsData().map((post) => post.id)
+}
+
+export default function BlogPost({ params }: { params: { id: string } }) {
+  const {id} = params
+
+  const {content, frontmatter, timeToRead} = getPostData({id})
 
   return (
-    <Layout
-      pageTitle={`${siteTitle} | ${frontmatter.title}`}
-      description={frontmatter.description}
-      previewImage={frontmatter.heroImage.path.big}
-      currentURL={`https://poladuco.com${router.asPath}`}
-      twitterHandle="PolaDuco"
-      isPost
-    >
+    <>
       <div className="w-full h-52 relative">
         <Image
           src={frontmatter.heroImage.path.big}
@@ -58,7 +53,7 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
               {format(parse(frontmatter.date, "yyyy-MM-dd", new Date()), "MMMM d, yyyy")}
             </h2>
             <h2 className="italic text-sm text-frontSecondary">
-              ・ {evaluateReadingTime(markdownBody)} min read
+              ・ {timeToRead} min read
             </h2>
           </div>
         </div>
@@ -66,7 +61,7 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
 
       <article className="my-4">
         <div className="prose mx-6 md:mx-8 lg:mx-12 max-w-none">
-          <ReactMarkdown renderers={renderers}>{markdownBody}</ReactMarkdown>
+          <ReactMarkdown renderers={renderers}>{content}</ReactMarkdown>
         </div>
         {frontmatter.original && (
           <div className="items-center text-frontSecondary flex flex-row justify-center mt-4 text-sm text-frontSecondarymr-1 italic gap-1">
@@ -82,42 +77,7 @@ export default function BlogPost({ siteTitle = "poladuco", frontmatter, markdown
           </div>
         )}
       </article>
-    </Layout>
-  );
+      </>
+  )
 }
 
-export async function getStaticProps({ ...ctx }) {
-  const { postname } = ctx.params
-
-  const content = await import(`../../posts/${postname}.md`)
-  const config = await import(`../../siteconfig.json`)
-  const data = matter(content.default)
-
-  return {
-    props: {
-      siteTitle: config.title,
-      frontmatter: data.data,
-      markdownBody: data.content
-    }
-  }
-}
-
-export async function getStaticPaths() {
-  const blogSlugs = ((context) => {
-    const keys = context.keys()
-    const data = keys.map((key) => {
-      const slug = key.replace(/^.*[\\/]/, "").slice(0, -3)
-
-      return slug
-    })
-    return data
-    // eslint-disable-next-line no-undef
-  })(require.context("../../posts", true, /\.md$/))
-
-  const paths = blogSlugs.map((slug) => `/post/${slug}`)
-
-  return {
-    paths,
-    fallback: false
-  }
-}

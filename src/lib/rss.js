@@ -1,5 +1,5 @@
 import fs from "fs"
-import { getPostsData } from "@lib/posts"
+import { getPostsData } from "lib/posts"
 import xmlFormat from "xml-formatter"
 
 export const generateRSSFeed = ({ title, url, description }) => {

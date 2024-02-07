@@ -18,19 +18,19 @@
         </lastBuildDate>
         <item>
             <title>
-                My path to staff engineer
+                5 Lessons Learned as a Woman Tech Lead
             </title>
             <link>
-                /post/My-path-to-staff-engineer
+                /post/5-Lessons-Learned-as-a-Woman-Tech-Lead
             </link>
             <author>
                 poladuco
             </author>
             <pubDate>
-                Tue Jan 02 2024 01:00:00 GMT+0100 (Ora standard dell’Europa centrale)
+                Tue Jun 09 2020 02:00:00 GMT+0200 (Ora legale dell’Europa centrale)
             </pubDate>
             <guid>
-                /post/My-path-to-staff-engineer
+                /post/5-Lessons-Learned-as-a-Woman-Tech-Lead
             </guid>
         </item>
         <item>
@@ -48,23 +48,6 @@
             </pubDate>
             <guid>
                 /post/Making-of-a-blog-analytics-without-Big-G
-            </guid>
-        </item>
-        <item>
-            <title>
-                Making of a blog: Tailwind me up
-            </title>
-            <link>
-                /post/Making-of-a-blog-style
-            </link>
-            <author>
-                poladuco
-            </author>
-            <pubDate>
-                Wed Feb 24 2021 01:00:00 GMT+0100 (Ora standard dell’Europa centrale)
-            </pubDate>
-            <guid>
-                /post/Making-of-a-blog-style
             </guid>
         </item>
         <item>
@@ -103,19 +86,36 @@
         </item>
         <item>
             <title>
-                5 Lessons Learned as a Woman Tech Lead
+                Making of a blog: Tailwind me up
             </title>
             <link>
-                /post/5-Lessons-Learned-as-a-Woman-Tech-Lead
+                /post/Making-of-a-blog-style
             </link>
             <author>
                 poladuco
             </author>
             <pubDate>
-                Tue Jun 09 2020 02:00:00 GMT+0200 (Ora legale dell’Europa centrale)
+                Wed Feb 24 2021 01:00:00 GMT+0100 (Ora standard dell’Europa centrale)
             </pubDate>
             <guid>
-                /post/5-Lessons-Learned-as-a-Woman-Tech-Lead
+                /post/Making-of-a-blog-style
+            </guid>
+        </item>
+        <item>
+            <title>
+                My path to staff engineer
+            </title>
+            <link>
+                /post/My-path-to-staff-engineer
+            </link>
+            <author>
+                poladuco
+            </author>
+            <pubDate>
+                Tue Jan 02 2024 01:00:00 GMT+0100 (Ora standard dell’Europa centrale)
+            </pubDate>
+            <guid>
+                /post/My-path-to-staff-engineer
             </guid>
         </item>
     </channel>

@@ -1,4 +1,4 @@
-module.exports = {
+const nextConfig = {
   webpack(config) {
     config.module.rules.push({
       test: /\.md$/,
@@ -9,5 +9,12 @@ module.exports = {
   images: {
     domains: ["github.com"],
     unoptimized: true
+  },
+  logging: {
+    fetches: {
+      fullUrl: true
+    }
   }
 }
+
+export default nextConfig

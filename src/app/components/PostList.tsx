@@ -1,6 +1,7 @@
-import { PostCard } from "@components/PostCard"
+import { PostCard } from "app/components/PostCard"
+import React from "react"
 
-const PostList = ({ posts }) => {
+export const PostList = ({ posts }) => {
   if (posts === "undefined") return null
 
   return (
@@ -15,5 +16,3 @@ const PostList = ({ posts }) => {
     </div>
   )
 }
-
-export default PostList
