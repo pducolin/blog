@@ -7,6 +7,7 @@ import { getPostData, getSortedPostsData } from "lib/posts"
 import { IconCalendar } from "app/components/Icons"
 import Image from "next/image"
 import Link from "next/link"
+import React from "react"
 import ReactMarkdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 
@@ -19,8 +20,9 @@ const renderers = {
 }
 
 export function generateStaticParams() {
-  return getSortedPostsData().map((post) => post.id)
+  return getSortedPostsData().map((post) => ({id: post.id}))
 }
+
 
 export default function BlogPost({ params }: { params: { id: string } }) {
   const {id} = params
