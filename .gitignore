@@ -35,4 +35,5 @@ yarn-error.log*
 next-env.d.ts
 
 .yarn/install-state.gz
+.yarn/cache/
 public/rss.xml
