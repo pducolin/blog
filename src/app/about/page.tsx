@@ -1,18 +1,13 @@
 import "tailwindcss/tailwind.css"
 
-import { Layout } from "@components/Layout"
+import React from "react"
+import {config} from "config/sitemap"
 
-const About = ({ title, description, previewImage }) => {
+const About = () => {
   return (
-    <Layout
-      pageTitle={title}
-      description={description}
-      currentURL="https://poladuco.com/about"
-      twitterHandle="PolaDuco"
-      previewImage={previewImage}
-    >
+<>    
       <h1 className="my-4 font-mono text-4xl font-medium text-center">poladuco.com</h1>
-      <h2 className="font-mono italic text-center text-md text-frontSecondary">{description}</h2>
+      <h2 className="font-mono italic text-center text-md text-frontSecondary">{config.description}</h2>
       <main className="mx-4 my-8 font-mono">
         <p>
           I am an Italian software developper living in Paris. I love learning new technologies,
@@ -29,20 +24,8 @@ const About = ({ title, description, previewImage }) => {
           I use this blog to play with web technologies and to share what I learn in the process.
         </p>
       </main>
-    </Layout>
+    </>
   )
 }
 
 export default About
-
-export async function getStaticProps() {
-  const configData = await import(`../siteconfig.json`)
-
-  return {
-    props: {
-      title: configData.default.title,
-      description: configData.default.description,
-      previewImage: configData.default.previewImage
-    }
-  }
-}

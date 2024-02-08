@@ -1,5 +1,5 @@
-import { PostCard } from "@components/PostCard"
-
+import { PostCard } from "app/components/PostCard"
+import React from "react"
 
 export const PostList = ({ posts }) => {
   if (posts === "undefined") return null

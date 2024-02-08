@@ -1,7 +1,8 @@
-import { IconGithub, IconTwitter } from "@components/Icons"
+import { IconGithub, IconRSS, IconTwitter } from "app/components/Icons"
 
 import Image from "next/image"
 import Link from "next/link"
+import React from "react"
 
 export const Header = () => {
   return (
@@ -25,7 +26,6 @@ export const Header = () => {
           <Link
             href="/"
             title="home"
-            alt="home"
             className="p-1 transition duration-500 ease-in-out border-b-2 border-opacity-0 outline-none text-frontSecondary hover:text-frontPrimary focus:text-frontPrimary border-frontPrimary hover:border-opacity-100 focus:border-opacity-100">
             
               Home
@@ -35,7 +35,6 @@ export const Header = () => {
           <Link
             href="/about"
             title="about"
-            alt="about"
             className="p-1 transition duration-500 ease-in-out border-b-2 border-opacity-0 outline-none text-frontSecondary hover:text-frontPrimary focus:text-frontPrimary border-frontPrimary hover:border-opacity-100 focus:border-opacity-100">
             
               About
@@ -65,6 +64,17 @@ export const Header = () => {
               className="fill-current text-frontSecondary hover:fill-current hover:text-frontPrimary focus:border-opacity-100 focus:fill-current focus:text-frontPrimary"
             />
           </a>
+          <Link
+            href="/rss.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1 transition duration-500 ease-in-out border-b-2 border-opacity-0 outline-none border-frontPrimary hover:border-opacity-100 focus:border-opacity-100 "
+          >
+            <IconRSS
+              size="20px"
+              className="fill-current text-frontSecondary hover:fill-current hover:text-frontPrimary focus:border-opacity-100 focus:fill-current focus:text-frontPrimary"
+            />
+          </Link>
         </div>
       </nav>
     </header>

@@ -1,6 +1,6 @@
 import { format, isSameYear, parse } from "date-fns"
 
-import { IconCalendar } from "@components/Icons"
+import { IconCalendar } from "app/components/Icons"
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
