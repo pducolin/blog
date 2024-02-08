@@ -14,25 +14,16 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "add": "^2.0.6",
     "date-fns": "^2.17.0",
-    "file-loader": "^6.2.0",
     "gray-matter": "^4.0.3",
     "next": "^14.1.0",
-    "raw-loader": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^5.0.3",
-    "react-syntax-highlighter": "^15.4.3",
-    "url-loader": "^4.1.1"
+    "react-syntax-highlighter": "^15.4.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.9",
-    "@babel/eslint-parser": "^7.23.10",
-    "@netlify/plugin-nextjs": "^4.41.3",
     "@next/eslint-plugin-next": "^14.0.4",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20.11.16",
@@ -61,7 +52,6 @@
     "ts-node": "^10.9.2",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
-    "webpack": "^5.89.0",
     "xml-formatter": "^3.6.2"
   },
   "husky": {
@@ -75,5 +65,5 @@
       "yarn lint:fix"
     ]
   },
-  "packageManager": "yarn@3.8.0"
+  "packageManager": "yarn@4.1.0"
 }
