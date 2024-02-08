@@ -15,7 +15,6 @@ const createRSSFeedContent = ({ title, url, description, posts }) => {
   return `<?xml version="1.0" ?>
 <rss version="2.0">
   <channel>
-      <atom:link href="${url}/rss.xml" rel="self" type="application/rss+xml" />
       <title>${title}</title>
       <link>${url}</link>
       <description>${description}</description>
