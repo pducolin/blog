@@ -10,7 +10,7 @@ export const generateRSSFeed = ({ title, url, description }) => {
 }
 
 const createRSSFeedContent = ({ title, url, description, posts }) => {
-  const { rssItems, latestPostDate } = createRSSItemsFromPosts({ posts })
+  const { rssItems, latestPostDate } = createRSSItemsFromPosts({ posts, url })
 
   return `<?xml version="1.0" ?>
 <rss version="2.0">
@@ -25,18 +25,18 @@ const createRSSFeedContent = ({ title, url, description, posts }) => {
 </rss>`
 }
 
-const createRSSItemsFromPosts = ({ posts }) => {
+const createRSSItemsFromPosts = ({ posts, url }) => {
   var rssItems = ""
-  var latestPostDate = new Date(null)
+  var latestPostDate = new Date(1970, 1, 1)
   // Add each individual post to the feed.
   posts.forEach((post) => {
     const pubDate = new Date(post.frontmatter.date)
     rssItems += `<item>
   <title>${post.frontmatter.title}</title>
-  <link>/post/${post.id}</link>
+  <link>${url}/post/${post.id}</link>
   <author>${post.frontmatter.author}</author>
   <pubDate>${pubDate.toString()}</pubDate>
-  <guid>/post/${post.id}</guid>
+  <guid>${post.id}</guid>
 </item>`
 
     if (pubDate > latestPostDate) {
