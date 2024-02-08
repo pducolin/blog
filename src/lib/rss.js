@@ -15,11 +15,12 @@ const createRSSFeedContent = ({ title, url, description, posts }) => {
   return `<?xml version="1.0" ?>
 <rss version="2.0">
   <channel>
+      <atom:link href="${url}" rel="self" type="application/rss+xml" />
       <title>${title}</title>
       <link>${url}</link>
       <description>${description}</description>
       <language>en</language>
-      <lastBuildDate>${latestPostDate.toString()}</lastBuildDate>
+      <lastBuildDate>${latestPostDate.toUTCString()}</lastBuildDate>
       ${rssItems}
   </channel>
 </rss>`
@@ -35,8 +36,8 @@ const createRSSItemsFromPosts = ({ posts, url }) => {
   <title>${post.frontmatter.title}</title>
   <link>${url}/post/${post.id}</link>
   <author>${post.frontmatter.author}</author>
-  <pubDate>${pubDate.toString()}</pubDate>
-  <guid>${post.id}</guid>
+  <pubDate>${pubDate.toUTCString()}</pubDate>
+  <guid>${url}/post/${post.id}</guid>
 </item>`
 
     if (pubDate > latestPostDate) {
