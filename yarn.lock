@@ -2231,7 +2231,6 @@ __metadata:
     url-loader: ^4.1.1
     webpack: ^5.89.0
     xml-formatter: ^3.6.2
-    yarn: ^1.22.21
   languageName: unknown
   linkType: soft
 
@@ -9119,16 +9118,6 @@ __metadata:
   version: 2.3.4
   resolution: "yaml@npm:2.3.4"
   checksum: e6d1dae1c6383bcc8ba11796eef3b8c02d5082911c6723efeeb5ba50fc8e881df18d645e64de68e421b577296000bea9c75d6d9097c2f6699da3ae0406c030d8
-  languageName: node
-  linkType: hard
-
-"yarn@npm:^1.22.21":
-  version: 1.22.21
-  resolution: "yarn@npm:1.22.21"
-  bin:
-    yarn: bin/yarn.js
-    yarnpkg: bin/yarn.js
-  checksum: 791fab07ad55351049361686bcdd25c64a46e2afe2f2fc7587e666aa4f758d7eef80235b921aa09415557ac580ab23305c0181c1b43fed45f357a0c7a77322a1
   languageName: node
   linkType: hard
 
