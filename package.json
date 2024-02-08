@@ -28,7 +28,8 @@
     "yarn": "^1.22.21"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.23.3",
+    "@babel/core": "^7.23.9",
+    "@babel/eslint-parser": "^7.23.10",
     "@netlify/plugin-nextjs": "^4.41.3",
     "@next/eslint-plugin-next": "^14.0.4",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -41,7 +42,7 @@
     "babel-eslint": "^9.0.0",
     "colors": "^1.4.0",
     "eslint": "^8.56.0",
-    "eslint-config-airbnb": "^18.0.0",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "^14.1.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-compat": "^4.2.0",
