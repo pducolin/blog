@@ -2,6 +2,11 @@ import "colors"
 
 import { createInterface } from "readline"
 import { writeFileSync } from "fs"
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const log = console.log
 
@@ -59,7 +64,7 @@ Apple pie jelly candy. Tiramisu fruitcake jelly beans lollipop. Gummies bonbon p
     // * i "ignore upper/lower case differences"
     // * g "global, match every instance"
     .replace(/[^a-z0-9-]/gi, "")
-  writeFileSync(__dirname + `/../posts/${filename}.md`, header)
+  writeFileSync(__dirname + `/../../posts/${filename}.md`, header)
   console.log(`Done, go to ${filename} and start writing`.green)
 }
 
