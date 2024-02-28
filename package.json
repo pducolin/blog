@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "new": "node scripts/createPost.js",
+    "new": "yarn tsx src/scripts/createPost.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "yarn serve out",
